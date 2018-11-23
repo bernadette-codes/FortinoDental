@@ -1287,9 +1287,14 @@ footer {
       a {
         color: $white;
 
+        &:link,
         &:visited,
         &:active {
           text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -1576,12 +1581,15 @@ Home and Gallery Page *****/
     color: $darkGray;
     margin: 30px auto;
 
-    &:hover {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
       text-decoration: none;
+    }
 
-      span {
-        color: $fontColor;
-      }
+    &:hover span {
+      color: $fontColor;
     }
   }
 }
@@ -1604,7 +1612,7 @@ Home and Contact Page *****/
     display: block;
     height: 500px;
     max-width: 1200px;
-    width: 100%;
+    width: 90%;
     margin: 30px auto 0;
     box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
   }
@@ -2334,36 +2342,6 @@ main#contact {
 } // end of main#contact
 
 
-@media (min-width: 1600px) {
-  .icarousel {
-    position: relative;
-    max-width: 1600px;
-    margin: 0 auto;
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: -10px;
-      bottom: -10px;
-      width: 100px;
-    }
-
-    &:before {
-      left: 0;
-      background: -webkit-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
-      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-    }
-
-    &:after {
-      right: 0;
-      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
-      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
-    }
-  }
-}
-
 @media (min-width: 751px) {
   #switch {
     > h2 {
@@ -2608,15 +2586,6 @@ main#contact {
   #carousel #cycle-2 {
     display: block;
   }
-  .index #reviews .pager {
-    position: absolute;
-    bottom: 24px;
-    right: 120px;
-    margin: 0;
-  }
-  #reviews .btn {
-    margin-top: 30px;
-  }
 }
 
 @media (max-width: 1050px) {
@@ -2631,31 +2600,17 @@ main#contact {
   .style-one {
     font-size: 32px;
   }
-  #ig > a {
-    font-size: 30px;
-  }
   #switch {
     padding: 10px 10px 30px;
   }
   #assoc {
     margin: 20px auto;
   }
-  #map {
-    padding: 10px;
-  }
   h2[data-image-src] {
     font-size: 40px;
     min-height: 300px;
   }
-  #reviews .cycle-slideshow:before {
-    top: -13%;
-  }
-  #reviews .cycle-slideshow:after {
-    bottom: -15%;
-  }
-  .icarousel .slick-slide {
-    margin: 0 5px;
-  }
+
 }
 
 @media (max-width: 750px) {
@@ -2708,17 +2663,6 @@ main#contact {
   h2 {
     font-size: 28px;
   }
-  #reviews {
-    padding: 0 10px 15px;
-  }
-  #reviews .arrow + .arrow {
-    margin-left: 100px;
-  }
-  #reviews .cycle-slideshow:before, #reviews .cycle-slideshow:after {
-    width: 50px;
-    height: 50px;
-    background-size: 100% auto;
-  }
   #assoc .img {
     margin: 10px;
     height: 35px;
@@ -2727,12 +2671,7 @@ main#contact {
     font-size: 32px;
     min-height: 220px;
   }
-  #reviews .cycle-slideshow:before {
-    top: -9%;
-  }
-  #reviews .cycle-slideshow:after {
-    bottom: -7%;
-  }
+
 }
 
 @media (max-width: 590px) {
@@ -2756,11 +2695,7 @@ main#contact {
   }
 }
 
-@media (max-width: 400px) {
-  .internal > #reviews .pager {
-    display: none;
-  }
-}
+
 
 
 
@@ -2773,6 +2708,36 @@ main#contact {
   to {
     background-position: 150px 0;
   }
+}
+
+@media (min-width: 1600px) {
+  .icarousel {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: -10px;
+      bottom: -10px;
+      width: 100px;
+    }
+
+    &:before {
+      left: 0;
+      background: -webkit-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:after {
+      right: 0;
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+    }
+  } // end of .icarousel
 }
 
 /* col-lg */
@@ -2801,6 +2766,25 @@ main#contact {
 
 /* col-md */
 @media (max-width: 991px) {
+  #reviews {
+    .cycle-slideshow:before {
+      top: -13%;
+    }
+
+    .cycle-slideshow:after {
+      bottom: -15%;
+    }
+  }
+
+  #ig > a {
+    font-size: 30px;
+    margin: 15px auto;
+  }
+
+  .icarousel .slick-slide {
+    margin: 0 5px;
+  }
+
   footer {
     form#appointmentForm {
       .col-md-6:nth-child(odd) {
@@ -2827,15 +2811,70 @@ main#contact {
     p.hours {
       margin-bottom: 10px;
     }
-  }
+  } // end of footer
 }
 
 /* col-sm */
 @media (max-width: 767px) {
+  #reviews .btn {
+    min-width: 200px;
+  }
 
+  #ig > img {
+    margin-bottom: 25px;
+  }
+
+  #map {
+    img {
+      max-width: 250px;
+    }
+
+    iframe {
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #reviews {
+    padding: 0 10px 15px;
+
+    .arrow + .arrow {
+      margin-left: 100px;
+    }
+
+    .cycle-slideshow:before,
+    .cycle-slideshow:after {
+      width: 50px;
+      height: 50px;
+      background-size: 100% auto;
+    }
+
+    .cycle-slideshow:before {
+      top: -9%;
+    }
+
+    .cycle-slideshow:after {
+      bottom: -7%;
+    }
+  }
 }
 
 @media (max-width: 500px) {
+  #ig > a {
+    font-size: 20px;
+  }
+
+  #map {
+    img {
+      max-width: 200px;
+    }
+
+    iframe {
+      height: 300px;
+    }
+  }
+
   footer form#appointmentForm {
     width: 90%;
   }
