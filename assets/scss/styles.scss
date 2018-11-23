@@ -2603,9 +2603,6 @@ main#contact {
   #switch {
     padding: 10px 10px 30px;
   }
-  #assoc {
-    margin: 20px auto;
-  }
   h2[data-image-src] {
     font-size: 40px;
     min-height: 300px;
@@ -2662,10 +2659,6 @@ main#contact {
   }
   h2 {
     font-size: 28px;
-  }
-  #assoc .img {
-    margin: 10px;
-    height: 35px;
   }
   h2[data-image-src] {
     font-size: 32px;
@@ -2766,6 +2759,10 @@ main#contact {
 
 /* col-md */
 @media (max-width: 991px) {
+  #assoc {
+    margin: 20px auto;
+  }
+
   #reviews {
     .cycle-slideshow:before {
       top: -13%;
@@ -2836,6 +2833,11 @@ main#contact {
 }
 
 @media (max-width: 700px) {
+  #assoc .img {
+    margin: 10px;
+    height: 35px;
+  }
+
   #reviews {
     padding: 0 10px 15px;
 
