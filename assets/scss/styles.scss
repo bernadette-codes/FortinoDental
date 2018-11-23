@@ -451,14 +451,6 @@ main {
   overflow: hidden;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1220px;
-}
-
 main ul {
   list-style: none;
   overflow: hidden;
@@ -2733,9 +2725,22 @@ main#contact {
   } // end of .icarousel
 }
 
+@media (min-width: 1220px) {
+
+}
+
 /* col-lg */
 @media (max-width: 1199px) {
-
+  main.about,
+  main.services,
+  main#gallery,
+  main#patients,
+  main#contact {
+    > div h2 {
+      font-size: 40px;
+      margin-top: 40px;
+    }
+  }
 }
 
 @media (max-width: 1080px) {
@@ -2747,13 +2752,6 @@ main#contact {
     a.gp {
       margin-bottom: 30px;
     }
-  }
-}
-
-@media (min-width: 991px) and (max-width: 1010px) {
-  footer .col-md-4:nth-of-type(2) {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -2829,6 +2827,21 @@ main#contact {
     iframe {
       height: 400px;
     }
+  }
+
+  main.about,
+  main.services,
+  main#gallery,
+  main#patients,
+  main#contact {
+    > div h2 {
+      font-size: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  #contact .hide-mobile {
+    display: none;
   }
 }
 
