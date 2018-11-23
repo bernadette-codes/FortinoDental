@@ -2255,6 +2255,7 @@ main#contact {
 
     p {
       margin-bottom: 10px;
+      margin-left: 5%;
 
       a,
       &:visited,
@@ -2267,6 +2268,10 @@ main#contact {
           text-decoration: none;
         }
       }
+    }
+
+    p.hours {
+      margin: 15px auto 50px;
     }
   }
 
@@ -2725,12 +2730,25 @@ main#contact {
   } // end of .icarousel
 }
 
-@media (min-width: 1220px) {
-
-}
 
 /* col-lg */
 @media (max-width: 1199px) {
+  footer {
+    a.loc {
+      font-size: 21px;
+    }
+
+    .social {
+      a:not(.gp) {
+        margin-bottom: 0;
+      }
+
+      a.gp {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
   main.about,
   main.services,
   main#gallery,
@@ -2739,18 +2757,6 @@ main#contact {
     > div h2 {
       font-size: 40px;
       margin-top: 40px;
-    }
-  }
-}
-
-@media (max-width: 1080px) {
-  footer .social {
-    a:not(.gp) {
-      margin-bottom: 0;
-    }
-
-    a.gp {
-      margin-bottom: 30px;
     }
   }
 }
@@ -2840,8 +2846,15 @@ main#contact {
     }
   }
 
-  #contact .hide-mobile {
-    display: none;
+  #contact {
+    .hide-mobile {
+      display: none;
+    }
+
+    .break {
+      display: block;
+      padding-left: 30px;
+    }
   }
 }
 
@@ -2901,6 +2914,23 @@ main#contact {
   }
 }
 
+@media (max-width: 400px) {
+  #contact {
+    .break2 {
+      display: block;
+      padding-left: 30px;
+    }
+
+    p.hours label {
+      margin-top: 15px;
+
+      &:nth-of-type(7) {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 350px) {
   footer {
     a.loc {
@@ -2910,6 +2940,10 @@ main#contact {
     .hours {
       font-size: 18px;
     }
+  }
+
+  main#contact .row p {
+    margin-left: 0;
   }
 }
 
