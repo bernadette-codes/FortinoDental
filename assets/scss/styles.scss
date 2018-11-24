@@ -524,6 +524,7 @@ header {
     background: url(../img/border-curve.png) no-repeat bottom right;
     background-size: 100% 100%;
     z-index: -1;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
 
@@ -1109,6 +1110,7 @@ footer {
 
   img[alt^="Schedule"] {
     max-width: 280px;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     margin-bottom: 20px;
   }
@@ -1410,6 +1412,14 @@ main#contact {
         padding-left: 50px;
       }
     }
+
+    .row ul {
+      margin-left: 5px;
+
+      li {
+        padding-left: 40px;
+      }
+    }
   }
 
   section.education {
@@ -1595,6 +1605,7 @@ Home and Contact Page *****/
 
   img {
     max-width: 300px;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transform: rotate(10deg);
     margin-bottom: -30px;
@@ -1696,6 +1707,7 @@ section.intro {
     img {
       background: $white;
       border-radius: 50%;
+      -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
     }
   }
@@ -2067,7 +2079,7 @@ main#team {
     }
 
     .panel-footer {
-      background: #cdcdcd url(../img/bg-charcoal-diagonal.jpg) repeat center center;
+      background: $darkColor url(../img/bg-charcoal-diagonal.jpg) repeat center center;
     }
 
     h3, h4 {
@@ -2089,6 +2101,12 @@ main#team {
 main#office #carousel #cycle-1 img {
   box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
 }
+
+/***** Services Section *****/
+main.services > div ul {
+  margin-left: 20px;
+}
+
 /***** Gallery Page *****/
 main#gallery {
   * {
@@ -2096,14 +2114,19 @@ main#gallery {
   }
 
   h3 {
-    text-align: center;
+    font-size: 30px;
     margin-top: 45px;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   .row { // side by side photos
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+
+    &.compare-row {
+      display: none;
+    }
 
     label {
       display: none;
@@ -2127,7 +2150,7 @@ main#gallery {
   section.photo-compare {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
   .img-comp-container {
@@ -2278,6 +2301,7 @@ main#contact {
   img[alt^="Office"],
   img[alt^="Contact"] {
     max-width: 230px;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     margin-bottom: 30px;
   }
@@ -2364,6 +2388,7 @@ main#contact {
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
       -webkit-animation: slide 8s linear infinite;
+      -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
 
       li {
@@ -2548,7 +2573,7 @@ main#contact {
   bottom: 0;
   left: 0;
   right: 0;
-  border: 8px solid $darkColor;
+  border: 3px solid $darkGray;
 }
 
 #cycle-2 .cycle-slide:hover img {
@@ -2730,7 +2755,6 @@ main#contact {
   } // end of .icarousel
 }
 
-
 /* col-lg */
 @media (max-width: 1199px) {
   footer {
@@ -2749,6 +2773,11 @@ main#contact {
     }
   }
 
+  section.intro figure {
+    width: 250px;
+    height: 250px;
+  }
+
   main.about,
   main.services,
   main#gallery,
@@ -2763,29 +2792,6 @@ main#contact {
 
 /* col-md */
 @media (max-width: 991px) {
-  #assoc {
-    margin: 20px auto;
-  }
-
-  #reviews {
-    .cycle-slideshow:before {
-      top: -13%;
-    }
-
-    .cycle-slideshow:after {
-      bottom: -15%;
-    }
-  }
-
-  #ig > a {
-    font-size: 30px;
-    margin: 15px auto;
-  }
-
-  .icarousel .slick-slide {
-    margin: 0 5px;
-  }
-
   footer {
     form#appointmentForm {
       .col-md-6:nth-child(odd) {
@@ -2813,10 +2819,59 @@ main#contact {
       margin-bottom: 10px;
     }
   } // end of footer
+
+  section.intro figure {
+    width: 200px;
+    height: 200px;
+  }
+
+  #assoc {
+    margin: 20px auto;
+  }
+
+  #reviews {
+    .cycle-slideshow:before {
+      top: -13%;
+    }
+
+    .cycle-slideshow:after {
+      bottom: -15%;
+    }
+  }
+
+  #ig > a {
+    font-size: 30px;
+    margin: 15px auto;
+  }
+
+  .icarousel .slick-slide {
+    margin: 0 5px;
+  }
+
+  main#about > div,
+  main.services > div {
+    .img-space {
+      margin-top: 0;
+    }
+
+    img:not([alt^="Fortino"]) {
+      margin: 35px auto 25px;
+      width: 85%;
+    }
+  }
+
+  main#patients .row img[alt^="Accepting"] {
+    width: 80%;
+    margin: 25px auto 20px;
+  }
 }
 
 /* col-sm */
 @media (max-width: 767px) {
+  #switch {
+    display: none;
+  }
+
   #reviews .btn {
     min-width: 200px;
   }
@@ -2846,7 +2901,57 @@ main#contact {
     }
   }
 
-  #contact {
+  main#about > div,
+  main.services > div {
+    h3 {
+      font-size: 25px;
+    }
+
+    li {
+      font-size: 22px;
+    }
+  }
+
+  main.services > div ul {
+    margin-left: 0;
+
+    li {
+      padding-left: 35px;
+    }
+  }
+
+  main#gallery {
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .row {
+      margin-top: 0;
+      margin-bottom: 25px;
+
+
+      &.compare-row {
+        display: block;
+      }
+
+      label {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .left img,
+      .right img{
+        margin: auto;
+      }
+    }
+
+    section.photo-compare {
+      display: none;
+    }
+  }
+
+  main#contact {
     .hide-mobile {
       display: none;
     }
@@ -2886,9 +2991,35 @@ main#contact {
       bottom: -7%;
     }
   }
+
+  main#office #carousel {
+    .arrow {
+      margin-top: 15px;
+    }
+
+    #next {
+      float: right;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  main#patients .break {
+    display: block;
+    padding-left: 30px;
+  }
 }
 
 @media (max-width: 500px) {
+  footer form#appointmentForm {
+    width: 90%;
+  }
+
+  section.intro figure {
+    width: 150px;
+    height: 150px;
+  }
+
   #ig > a {
     font-size: 20px;
   }
@@ -2902,10 +3033,6 @@ main#contact {
       height: 300px;
     }
   }
-
-  footer form#appointmentForm {
-    width: 90%;
-  }
 }
 
 @media (max-width: 420px) {
@@ -2915,7 +3042,8 @@ main#contact {
 }
 
 @media (max-width: 400px) {
-  #contact {
+  main#patients,
+  main#contact {
     .break2 {
       display: block;
       padding-left: 30px;
@@ -2923,11 +3051,11 @@ main#contact {
 
     p.hours label {
       margin-top: 15px;
-
-      &:nth-of-type(7) {
-        display: none;
-      }
     }
+  }
+
+  main#contact p.hours label:nth-of-type(7) {
+    display: none;
   }
 }
 
