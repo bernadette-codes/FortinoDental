@@ -2635,49 +2635,6 @@ main#contact {
 
 }
 
-@media (max-width: 750px) {
-  #switch {
-    padding: 10px;
-  }
-  #switch figure {
-    padding: 6px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #switch #split article {
-    margin: 0 auto !important;
-  }
-  #switch #split article p {
-    max-width: 100%;
-  }
-  #switch #split figure img {
-    width: 200px;
-  }
-  #switch #nav li > span {
-    min-height: 45px;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-  }
-  #switch #nav li > span small {
-    font-size: inherit;
-    font-weight: inherit;
-    margin-left: 5px;
-  }
-  #switch .flex-ed > * {
-    margin-top: 10px;
-  }
-  #switch #split figure {
-    display: none;
-  }
-}
-
 @media (max-width: 700px) {
   body {
     font-size: 18px;
@@ -2779,6 +2736,7 @@ main#contact {
   section.intro figure {
     width: 250px;
     height: 250px;
+    padding: 6px;
   }
 
   main#about,
@@ -2831,6 +2789,16 @@ main#contact {
   section.intro figure {
     width: 200px;
     height: 200px;
+    padding: 4px;
+  }
+
+  #switch #split figure {
+    padding: 9px;
+
+    img {
+      width: 350px;
+      height: 350px;
+    }
   }
 
   #assoc {
@@ -2882,10 +2850,38 @@ main#contact {
   }
 }
 
+@media (max-width: 800px) {
+  #switch #split figure {
+    padding: 7px;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
 /* col-sm */
 @media (max-width: 767px) {
+  section.intro {
+    .row {
+      margin: 35px 0 0;
+    }
+
+    figure {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
   #switch {
-    display: none;
+    > h2 {
+      margin: 25px auto 20px;
+    }
+
+    #nav li {
+      clear: both;
+    }
   }
 
   #assoc img {
@@ -2991,6 +2987,67 @@ main#contact {
   }
 }
 
+@media (max-width: 750px) {
+  #switch {
+    padding: 10px;
+
+    #nav {
+      li > span {
+        min-height: 45px;
+        -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+
+        small {
+          font-size: inherit;
+          font-weight: inherit;
+          margin-left: 5px;
+        }
+      }
+    }
+
+
+    #split {
+      padding: 5px;
+      border: 2px solid $beige;
+      border-radius: 10px;
+
+      article {
+        margin: 20px auto !important;
+
+        p {
+          max-width: 100%;
+        }
+      }
+
+      #invisalign h2 {
+        font-size: 28px;
+
+        span {
+          font-size: 32px;
+        }
+      }
+
+      #botox .btn {
+        float: none;
+      }
+
+      figure {
+        display: none;
+      }
+    }
+
+    .flex-ed > * {
+      margin-top: 10px;
+    }
+  }
+}
+
 @media (max-width: 700px) {
   #assoc .img {
     margin: 10px;
@@ -3070,6 +3127,12 @@ main#contact {
 }
 
 @media (max-width: 550px) {
+  section.intro figure {
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+  }
+
   main#dentist,
   main#perio {
     section.education > div h4 {
@@ -3086,11 +3149,6 @@ main#contact {
 @media (max-width: 500px) {
   footer form#appointmentForm {
     width: 90%;
-  }
-
-  section.intro figure {
-    width: 150px;
-    height: 150px;
   }
 
   #ig > a {
@@ -3122,6 +3180,16 @@ main#contact {
 @media (max-width: 420px) {
   .copyright .break {
     display: block;
+  }
+
+  section.intro .row > div {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    h3 {
+      font-size: 16px;
+      margin: 10px auto 0;
+    }
   }
 }
 
@@ -3165,6 +3233,11 @@ main#contact {
     .hours {
       font-size: 18px;
     }
+  }
+
+  section.intro figure {
+    width: 80px;
+    height: 80px;
   }
 
   main#contact .row p {
