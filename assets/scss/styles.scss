@@ -932,6 +932,7 @@ header {
   }
   .mean-container a.meanmenu-reveal.meanclose {
     -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   .mean-container .mean-bar > i {
@@ -1085,6 +1086,7 @@ header {
 .close-btn i {
   margin-right: 8px;
   -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1607,6 +1609,8 @@ Home and Contact Page *****/
     max-width: 300px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
     transform: rotate(10deg);
     margin-bottom: -30px;
   }
@@ -1623,9 +1627,13 @@ Home and Contact Page *****/
 
 /***** Home Page *****/
 /* Photo Transition Show */
-.carousel-indicators li {
-  background-color: $darkGray;
-  border-color: $darkGray;
+.carousel-indicators {
+  left: 95%;
+
+  li {
+    background-color: $darkGray;
+    border-color: $darkGray;
+  }
 }
 
 .carousel-inner img {
@@ -2311,6 +2319,8 @@ main#contact {
 
   img[alt^="Office"] {
     margin-bottom: 20px;
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
     transform: rotate(5deg);
   }
 
@@ -2452,7 +2462,8 @@ main#contact {
   content: "+";
   -webkit-transform-origin: center center;
   transform-origin: center center;
-  -webkit-transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   display: block;
 }
@@ -2733,6 +2744,10 @@ main#contact {
     }
   }
 
+  .carousel-indicators {
+    left: 92%;
+  }
+
   section.intro figure {
     width: 250px;
     height: 250px;
@@ -2863,6 +2878,10 @@ main#contact {
 
 /* col-sm */
 @media (max-width: 767px) {
+  .carousel-indicators {
+    left: 90%;
+  }
+
   section.intro {
     .row {
       margin: 35px 0 0;
@@ -3127,6 +3146,21 @@ main#contact {
 }
 
 @media (max-width: 550px) {
+  .carousel-indicators {
+    left: 87%;
+    bottom: 5px;
+
+    .active {
+      width: 10px;
+      height: 10px;
+    }
+
+    li {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
   section.intro figure {
     width: 100px;
     height: 100px;
