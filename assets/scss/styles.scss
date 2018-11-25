@@ -2013,6 +2013,13 @@ section.intro {
 } // end of #reviews
 
 /***** About Section *****/
+main#dentist,
+main#perio {
+  small {
+    display: block;
+  }
+}
+
 /* Dentist Page */
 main#dentist {
   > div {
@@ -2032,11 +2039,7 @@ main#perio {
     margin-top: 5%;
   }
 
-  small {
-    display: block;
-  }
-
-  .education div:nth-of-type(2) h2 {
+  section.education div:nth-of-type(2) h2 {
     padding-top: 0;
   }
 
@@ -2778,6 +2781,7 @@ main#contact {
     height: 250px;
   }
 
+  main#about,
   main.about,
   main.services,
   main#gallery,
@@ -2787,6 +2791,10 @@ main#contact {
       font-size: 40px;
       margin-top: 40px;
     }
+  }
+
+  main#dentist > div figure img {
+    width: 75%;
   }
 }
 
@@ -2860,6 +2868,14 @@ main#contact {
     }
   }
 
+  main#dentist,
+  main#perio {
+    section.education > div,
+    > div ul {
+      margin-left:10px
+    }
+  }
+
   main#patients .row img[alt^="Accepting"] {
     width: 80%;
     margin: 25px auto 20px;
@@ -2870,6 +2886,10 @@ main#contact {
 @media (max-width: 767px) {
   #switch {
     display: none;
+  }
+
+  #assoc img {
+    margin: 20px auto;
   }
 
   #reviews .btn {
@@ -2890,6 +2910,7 @@ main#contact {
     }
   }
 
+  main#about,
   main.about,
   main.services,
   main#gallery,
@@ -2909,6 +2930,13 @@ main#contact {
 
     li {
       font-size: 22px;
+    }
+  }
+
+  main#dentist,
+  main#perio {
+    section.education > div h2 {
+      font-size: 24px
     }
   }
 
@@ -2992,6 +3020,19 @@ main#contact {
     }
   }
 
+  main#dentist,
+  main#perio {
+    > div ul {
+      font-size: 22px;
+      margin-left: 0;
+
+      li {
+        margin-left: 10px;
+        padding-left: 35px;
+      }
+    }
+  }
+
   main#office #carousel {
     .arrow {
       margin-top: 15px;
@@ -3003,7 +3044,39 @@ main#contact {
   }
 }
 
+@media (max-width: 600px) {
+  main#dentist,
+  main#perio {
+    section.education {
+      margin-bottom: 30px;
+
+      > div {
+        img {
+          width: 37px;
+          height: 50px;
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          padding-top: 0;
+        }
+
+        h4 {
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 550px) {
+  main#dentist,
+  main#perio {
+    section.education > div h4 {
+      font-size: 20px;
+    }
+  }
+
   main#patients .break {
     display: block;
     padding-left: 30px;
@@ -3033,6 +3106,17 @@ main#contact {
       height: 300px;
     }
   }
+
+  main#dentist,
+  main#perio {
+    h2 .break {
+      display: block;
+    }
+
+    h3 {
+      clear: both;
+    }
+  }
 }
 
 @media (max-width: 420px) {
@@ -3042,6 +3126,19 @@ main#contact {
 }
 
 @media (max-width: 400px) {
+  main#dentist,
+  main#perio {
+    section.education > div {
+      h2, h3 {
+        font-size: 22px;
+      }
+
+      h3 .break {
+        display: block;
+      }
+    }
+  }
+
   main#patients,
   main#contact {
     .break2 {
