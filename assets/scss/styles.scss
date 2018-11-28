@@ -1671,6 +1671,22 @@ section.intro {
     margin: 25px auto 0;
   }
 
+  ul {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: left;
+
+    li {
+      font-size: 27px;
+      font-weight: 600;
+      padding-left: 35px;
+
+      &:before {
+        font-size: 20px;
+      }
+    }
+  }
+
   .row {
     margin-top: 50px;
   }
@@ -3238,9 +3254,15 @@ main#contact {
     }
   }
 
-  section.intro figure {
-    width: 80px;
-    height: 80px;
+  section.intro {
+    ul li {
+      font-size: 25px;
+    }
+
+    figure {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   main#contact .row p {
