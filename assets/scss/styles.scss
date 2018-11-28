@@ -377,7 +377,7 @@ star:before {
 
 main ul li:before {
   content: '\e832';
-  color: $darkColor;
+  color: $fontColor;
 }
 
 .flex-ed, .col-flex-ed {
@@ -423,7 +423,7 @@ main ul li:before {
 }
 
 .btn {
-  background: $darkColor url(../img/bg-charcoal-diagonal.jpg) repeat center center;
+  background: $lessBlack; // url(../img/bg-charcoal-diagonal.jpg) repeat center center;
 
   &:hover {
     -webkit-animation: slide 8s linear infinite;
@@ -551,7 +551,7 @@ header {
       bottom: 0;
       left: -5555px;
       right: -5555px;
-      background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+      background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
       z-index: -1;
     }
 
@@ -700,7 +700,7 @@ header {
   }
   nav > ul > li:hover > a:hover {
     color: $white;
-    background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+    background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
     -webkit-animation: slide 8s linear infinite;
     text-decoration: none;
   }
@@ -721,7 +721,7 @@ header {
     z-index: 3;
     left: 0;
     text-align: left;
-    background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+    background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
     box-shadow: 10px 17.3px 25px rgba(0, 0, 0, 0.2);
   }
   nav > ul > li:last-child ul {
@@ -735,12 +735,12 @@ header {
   nav ul ul ul {
     left: 100%;
     top: 0;
-    background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+    background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
   }
   nav ul ul li:hover > a,
   nav ul ul li > a:hover {
     color: $white;
-    background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+    background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
     -webkit-animation: slide 8s linear infinite;
     text-decoration: none;
   }
@@ -874,7 +874,7 @@ header {
   }
   .mean-container .mean-bar,
   .mean-container .mean-nav {
-    background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+    background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
   }
   body, header, .mean-container .mean-nav {
     -webkit-transition: all .08s;
@@ -1091,7 +1091,7 @@ header {
 }
 
 .index {
-  background: $beige url(../img/bg-sand-texture.jpg) repeat left top;
+  background: $white;// url(../img/bg-sand-texture.jpg) repeat left top;
   background-size: cover;
 }
 
@@ -1102,7 +1102,7 @@ header {
 }
 
 footer {
-  background: $darkGray url(../img/bg-gray-textured.png) repeat left top;
+  background: $darkGray; // url(../img/bg-gray-textured.png) repeat left top;
   color: $white;
   font-size: 16px;
   line-height: 1.75;
@@ -1110,11 +1110,10 @@ footer {
   padding: 60px 0 0;
   text-align: center;
 
-  img[alt^="Schedule"] {
-    max-width: 280px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+  h2 {
+    color: $white;
     margin-bottom: 20px;
+    text-transform: none;
   }
 
   form#appointmentForm {
@@ -1136,7 +1135,7 @@ footer {
     input.form-control,
     select.form-control,
     textarea.form-control {
-      background: $beige url(../img/bg-sand-texture.jpg) repeat left top;
+      background: $white;// url(../img/bg-sand-texture.jpg) repeat left top;
       color: $fontColor;
       font-size: 16px;
       line-height: 1.75;
@@ -1155,16 +1154,16 @@ footer {
     }
 
     ::-webkit-input-placeholder {
-      color: $fontDarkerColor;
+      color: $lessBlack;
     }
     :-ms-input-placeholder {
-      color: $fontDarkerColor;
+      color: $lessBlack;
     }
     ::-ms-input-placeholder {
-      color: $fontDarkerColor;
+      color: $lessBlack;
     }
     ::placeholder {
-      color: $fontDarkerColor;
+      color: $lessBlack;
     }
 
     .g-recaptcha {
@@ -1176,6 +1175,11 @@ footer {
       min-width: 186px;
       padding: 9px;
       margin-top: 15px;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
     }
   } // end of footer form#appointmentForm
 
@@ -1367,33 +1371,21 @@ main.services,
 main#gallery,
 main#patients,
 main#contact {
-  background: $beige url(../img/bg-sand-texture.jpg) repeat left top;
+  background: $white;// url(../img/bg-sand-texture.jpg) repeat left top;
   background-size: cover;
-
-  > section {
-    background: $beige url(../img/bg-building.jpg) no-repeat center bottom;
-    background-size: cover;
-
-    img {
-      height: 500px;
-      width: auto;
-      margin-top: 8%;
-      margin-left: 15%;
-    }
-  }
 
   > div {
     margin-bottom: 80px;
 
     h2 {
-      color: $darkColor;
+      color: $fontColor;
       font-size: 50px;
       font-weight: 400;
       line-height: 1.5;
       margin: 50px 15px 40px 10px;
 
       small {
-        color: $darkColor;
+        color: $fontColor;
       }
     }
 
@@ -1466,29 +1458,6 @@ main#contact {
 } // end of main.about, main.services, main#contact
 
 main#about,
-main#team,
-main#office,
-main.services,
-main#gallery,
-main#patients,
-main#contact {
-  > section {
-    background: #cdcdcd;
-    padding-left: 0;
-    padding-right: 0;
-
-    img {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      margin-top: 20px;
-      margin-left: 0;
-    }
-  }
-}
-
-main#about,
 main.services {
   > div {
     margin-bottom: 50px;
@@ -1515,10 +1484,15 @@ main.services {
       margin-top: 80px;
     }
 
-    img:not([alt^="Fortino"]) {
+    img {
       margin-top: 50px;
       box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
     }
+
+    //img:not([alt^="Fortino"]) {
+    //  margin-top: 50px;
+    //  box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
+    //}
 
     li {
       font-size: 24px;
@@ -1582,7 +1556,7 @@ Home and Gallery Page *****/
     display: block;
     font-size: 44px;
     font-weight: 900;
-    color: $darkGray;
+    color: $fontColor;
     margin: 30px auto;
 
     &:link,
@@ -1706,28 +1680,26 @@ section.intro {
     height: 300px;
     padding: 9px;
     margin: 0 auto;
-    border-radius: 50%;
-    background: -webkit-gradient(linear, left bottom, left top, from($darkGray), to($fontColor));
-    background: -webkit-linear-gradient(bottom, $darkGray 0%, $fontColor 100%);
-    background: -o-linear-gradient(bottom, $darkGray 0%, $fontColor 100%);
-    background: linear-gradient(to top, $darkGray 0%, $fontColor 100%);
+    border-radius: 5%;
+    background: $lessBlack;
 
     img {
       background: $white;
-      border-radius: 50%;
+      border-radius: 5%;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
     }
   }
 
   h3 {
+    color: $fontColor;
     margin: 20px auto 25px;
   }
 } // end of section.intro
 
 /* Featured Services */
 #switch {
-  background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+  background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
   color: $white;
   padding: 60px 10px;
   text-align: center;
@@ -1779,7 +1751,7 @@ section.intro {
       > span.active,
       &.cycle-pager-active > span {
         color: $fontColor;
-        background: $beige url(../img/bg-sand-texture.jpg) repeat left top;
+        background: $white;// url(../img/bg-sand-texture.jpg) repeat left top;
       }
 
       > div {
@@ -1870,12 +1842,9 @@ section.intro {
 
     figure {
       position: relative;
-      padding: 12px;
+      padding: 9px;
       border-radius: 50%;
-      background: -webkit-gradient(linear, left bottom, left top, from($darkGray), to($fontColor));
-      background: -webkit-linear-gradient(bottom, $darkGray 0%, $fontColor 100%);
-      background: -o-linear-gradient(bottom, $darkGray 0%, $fontColor 100%);
-      background: linear-gradient(to top, $darkGray 0%, $fontColor 100%);
+      background: $lessBlack;
 
       img {
         border-radius: 50%;
@@ -2071,7 +2040,7 @@ main#team {
     box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
 
     .panel-heading {
-      background: $darkGray url(../img/bg-gray-textured.png) repeat center center;
+      background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
       padding: 15px;
     }
 
@@ -2090,7 +2059,7 @@ main#team {
     }
 
     .panel-footer {
-      background: $darkColor url(../img/bg-charcoal-diagonal.jpg) repeat center center;
+      background: $lessBlack; // url(../img/bg-charcoal-diagonal.jpg) repeat center center;
     }
 
     h3, h4 {
@@ -2325,6 +2294,8 @@ main#contact {
   }
 
   form#contactForm {
+    margin-top: 20px;
+
     input.form-control,
     textarea.form-control {
       background: $darkColor;
@@ -2391,7 +2362,7 @@ main#contact {
       max-width: 760px;
       margin: 0 auto 30px;
       padding: 3px;
-      background: $darkColor url(../img/bg-charcoal-diagonal.jpg) repeat center center;
+      background: $lessBlack; // url(../img/bg-charcoal-diagonal.jpg) repeat center center;
       border-radius: 29px;
       display: -webkit-box;
       display: -webkit-flex;
@@ -2490,7 +2461,7 @@ main#contact {
 
 .arrow {
   font-size: 60px;
-  color: $darkColor;
+  color: $fontColor;
 }
 
 .arrow:visited,
@@ -2501,7 +2472,7 @@ main#contact {
  }
 
 .arrow:focus {
-  color: $darkColor;
+  color: $fontColor;
   text-decoration: none;
 }
 
@@ -2808,8 +2779,6 @@ main#contact {
   }
 
   #switch #split figure {
-    padding: 9px;
-
     img {
       width: 350px;
       height: 350px;
@@ -3033,7 +3002,7 @@ main#contact {
 
     #split {
       padding: 5px;
-      border: 2px solid $beige;
+      border: 2px solid $white;
       border-radius: 10px;
 
       article {
