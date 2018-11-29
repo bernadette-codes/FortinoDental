@@ -88,11 +88,6 @@ dfn {
   font-style: italic;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0 0 .67em;
-}
-
 mark {
   background-color: #ff0;
   color: $black;
@@ -271,17 +266,9 @@ hr {
   opacity: 0.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   margin: 0;
   position: relative;
-}
-
-h1 {
-  font-size: 36px;
-  line-height: 1.16;
-  color: #2d2d2d;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -302,17 +289,8 @@ h3 {
   letter-spacing: 0;
 }
 
-h1 > span, .style-one, .style-two {
+.style-one, .style-two {
   display: block;
-}
-
-section.intro h3 {
-  font-size: 18px;
-  line-height: 1.44;
-  color: $fontColor;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0;
 }
 
 .style-two {
@@ -347,14 +325,10 @@ h2[data-image-src] {
   font-weight: 400;
 }
 
-header .pho {
-  font-weight: 500;
-}
-
-header .top-nav > div a:nth-of-type(1), .btn,
+.btn,
 .btn-alt, h2 strong,
 .hours label, #switch #nav li > span, .tabs,
-.tabs strong, header .bien, table thead th, table tbody tr.o td:first-child {
+.tabs strong, table thead th, table tbody tr.o td:first-child {
   font-weight: 900;
 }
 
@@ -421,9 +395,9 @@ main ul li:before {
 .btn {
   background: $lessBlack; // url(../img/bg-charcoal-diagonal.jpg) repeat center center;
 
-  &:hover {
-    -webkit-animation: slide 8s linear infinite;
-  }
+  //&:hover {
+  //  -webkit-animation: slide 8s linear infinite;
+  //}
 }
 
 .btn-alt {
@@ -439,7 +413,8 @@ main ul li:before {
   color: $white;
 }
 
-form .btn, form .btn-alt {
+form .btn,
+form .btn-alt {
   margin: 0;
 }
 
@@ -514,89 +489,7 @@ header {
   text-align: center;
   line-height: 1;
   z-index: 100;
-
-  //&:after {
-  //  content: '';
-  //  position: absolute;
-  //  left: 0;
-  //  top: 100%;
-  //  width: 100%;
-  //  height: 108px;
-  //  background: url(../img/border-curve.png) no-repeat bottom right;
-  //  background-size: 100% 100%;
-  //  z-index: -1;
-  //  -webkit-filter: grayscale(100%);
-  //  filter: grayscale(100%);
-  //}
-
-  .top-nav a,
-  .top-nav a > *,
-  .info a > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .top-nav {
-    position: relative;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 8px 10px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -5555px;
-      right: -5555px;
-      background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
-      z-index: -1;
-    }
-
-    a {
-      color: $white;
-
-      &:hover {
-        color: $hoverColor;
-      }
-
-      i {
-        font-size: 20px;
-        line-height: 24px;
-        width: 24px;
-      }
-    }
-  } // end of header .top-nav
-
-  .phy span {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    line-height: 22px;
-  }
-
-  .pho span {
-    font-size: 22px;
-    letter-spacing: 0.04em;
-  }
-
-  .info a {
-    display: inline-block;
-    vertical-align: middle;
-    color: $fontColor;
-
-    span {
-      font-weight: 600;
-    }
-  }
-
-  .info .pho span {
-    font-size: 30px;
-  }
-} // end of header
+}
 
 .attach header {
   position: fixed !important;
@@ -608,10 +501,6 @@ header {
   background-size: 100% 100%;
   -webkit-transition: none;
   transition: none;
-}
-
-.attach header .top-nav {
-  display: none;
 }
 
 @media (min-width: 901px) {
@@ -703,7 +592,7 @@ header {
   nav > ul > li:hover > a:hover {
     color: $white;
     background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
-    -webkit-animation: slide 8s linear infinite;
+    //-webkit-animation: slide 8s linear infinite;
     text-decoration: none;
   }
   nav ul li:hover > ul {
@@ -743,12 +632,9 @@ header {
   nav ul ul li > a:hover {
     color: $white;
     background: $black; // url(../img/bg-gray-textured.png) repeat center center;
-    -webkit-animation: slide 8s linear infinite;
+    //-webkit-animation: slide 8s linear infinite;
     text-decoration: none;
   }
-  //#mobile-header, #mobile-footer {
-  //  display: none;
-  //}
 }
 
 @media (min-width: 1100px) {
@@ -781,53 +667,12 @@ header {
   header .logo img {
     width: 180px;
   }
-  header .info a {
-    display: table;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  header .info .pho span {
-    font-size: 22px;
-  }
-  header .top-nav > div {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-  header .top-nav a {
-    width: 100%;
-  }
-  header .top-nav a img {
-    float: left;
-  }
   .attach header {
     right: 0;
     box-shadow: 0 3px 7px rgba(24, 23, 24, 0.35);
   }
   .attach.mean-active header {
     right: 80%;
-  }
-  header .bien {
-    display: block;
-    margin: 10px;
-    padding: 11px;
-    background-color: #2b88c9;
-    color: $white;
-    font-size: 15px;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-  header .bien > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  header .bien i {
-    font-size: 14px;
-    margin-right: 5px;
-  }
-  header .bien:hover {
-    background-color: #f06024;
   }
   a[name]:before {
     height: 90px;
@@ -836,44 +681,6 @@ header {
   header #desktop-nav {
     display: none !important;
   }
-  //#mobile-header {
-  //  background: $white;
-  //  padding: 0 10px;
-  //  min-height: 83px;
-  //  overflow: hidden;
-  //  -webkit-box-align: center;
-  //  -webkit-align-items: center;
-  //  -ms-flex-align: center;
-  //  -ms-grid-row-align: center;
-  //  align-items: center;
-  //  -webkit-box-pack: center;
-  //  -webkit-justify-content: center;
-  //  -ms-flex-pack: center;
-  //  justify-content: center;
-  //}
-  //#mobile-header img {
-  //  max-height: 50px;
-  //  max-width: none;
-  //}
-  //#mobile-footer {
-  //  color: $white;
-  //  padding: 20px 0 0;
-  //  //margin-top: auto;
-  //  line-height: 1.76;
-  //}
-  //
-  //#mobile-footer span {
-  //  font-size: 18px;
-  //  font-weight: 900;
-  //}
-  //
-  //#mobile-footer .style-three {
-  //  color: $white;
-  //}
-  //#mobile-footer .hours {
-  //  font-size: 16px;
-  //  margin: 0 auto;
-  //}
   .mean-container .mean-bar,
   .mean-container .mean-nav {
     background: $darkGray; // url(../img/bg-gray-textured.png) repeat center center;
@@ -1040,21 +847,6 @@ header {
   }
 }
 
-@media (max-width: 650px) {
-  header .info .phy {
-    display: none;
-  }
-}
-
-@media (max-width: 470px) {
-  header .top-nav .right a span span {
-    display: none;
-  }
-  header .info {
-    display: none;
-  }
-}
-
 .close-btn > * {
   display: inline-block;
   vertical-align: middle;
@@ -1094,7 +886,7 @@ header {
 
 .index {
   background: $white;// url(../img/bg-sand-texture.jpg) repeat left top;
-  background-size: cover;
+  //background-size: cover;
 }
 
 @media (min-width: 901px) {
@@ -1303,44 +1095,6 @@ footer {
   }
 } // end of footer
 
-/* Submitted Form */
-#submitted {
-  margin: 10% auto 15%;
-
-  p {
-    font-size: 20px;
-
-    &:first-of-type {
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 35px;
-      padding-bottom: 20px;
-    }
-  }
-}
-
-.hours {
-  display: table;
-  font-size: 20px;
-  margin: 0;
-  text-align: left !important;
-
-  label {
-    width: 110px;
-    display: inline-block;
-    margin-right: 10px;
-
-    &:nth-of-type(7) {
-      visibility: hidden;
-    }
-  }
-
-  small {
-    display: block;
-    margin-top: 5px;
-  }
-}
-
 .social {
   font-size: 0;
   text-align: center;
@@ -1377,12 +1131,28 @@ footer {
     background-color: #dc4e41;
   }
 }
-//
-//#mobile-header .social a:hover,
-//#mobile-header .social a.ig:hover {
-//  background: $darkGray;
-//  text-decoration: none;
-//}
+
+.hours {
+  display: table;
+  font-size: 20px;
+  margin: 0;
+  text-align: left !important;
+
+  label {
+    width: 110px;
+    display: inline-block;
+    margin-right: 10px;
+
+    &:nth-of-type(7) {
+      visibility: hidden;
+    }
+  }
+
+  small {
+    display: block;
+    margin-top: 5px;
+  }
+}
 
 main.about,
 main.services,
@@ -1390,7 +1160,7 @@ main#gallery,
 main#patients,
 main#contact {
   background: $white;// url(../img/bg-sand-texture.jpg) repeat left top;
-  background-size: cover;
+  //background-size: cover;
 
   > div {
     margin-bottom: 80px;
@@ -1527,69 +1297,6 @@ main.services {
   }
 } // end of main#about & main.services
 
-/***** Instagram Slideshow
-Home and Gallery Page *****/
-#ig {
-  background-color: $white;
-  text-align: center;
-
-  > img {
-    margin: 35px auto;
-  }
-
-  .icarousel {
-
-    .slick-track {
-      display: flex;
-      flex-flow: row wrap;
-    }
-
-    .slick-slide {
-      position: relative;
-      height: inherit;
-      overflow: hidden;
-      margin: 0 15px;
-
-      &:hover {
-        -webkit-transform: scale(0.88);
-        transform: scale(0.88);
-      }
-    }
-
-    .landscape img,
-    .portrait img {
-      position: absolute;
-    }
-
-    .landscape img {
-      height: 100%;
-      max-width: inherit;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-  } // end of .icarousel
-
-  > a {
-    display: block;
-    font-size: 44px;
-    font-weight: 900;
-    color: $fontColor;
-    margin: 30px auto;
-
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      text-decoration: none;
-    }
-
-    &:hover span {
-      color: $fontColor;
-    }
-  }
-}
-
 /***** Google Map
 Home and Contact Page *****/
 #map {
@@ -1597,15 +1304,15 @@ Home and Contact Page *****/
   background-attachment: fixed;
   padding: 30px 20px 55px;
 
-  img {
-    max-width: 300px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    transform: rotate(10deg);
-    margin-bottom: -30px;
-  }
+  //img {
+  //  max-width: 300px;
+  //  -webkit-filter: grayscale(100%);
+  //  filter: grayscale(100%);
+  //  -webkit-transform: rotate(10deg);
+  //  -ms-transform: rotate(10deg);
+  //  transform: rotate(10deg);
+  //  margin-bottom: -30px;
+  //}
 
   iframe {
     display: block;
@@ -1679,7 +1386,8 @@ section.intro {
   h2 + h3 {
     font-size: 32px;
     font-weight: 600;
-    text-transform: none;
+    line-height: 1.44;
+    letter-spacing: 0;
   }
 
   p {
@@ -1707,25 +1415,25 @@ section.intro {
     }
   }
 
-  .row {
-    margin-top: 50px;
-  }
+  //.row {
+  //  margin-top: 50px;
+  //}
 
-  figure {
-    width: 300px;
-    height: 300px;
-    padding: 9px;
-    margin: 0 auto;
-    border-radius: 5%;
-    background: $lessBlack;
-
-    img {
-      background: $white;
-      border-radius: 5%;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-    }
-  }
+  //figure {
+  //  width: 300px;
+  //  height: 300px;
+  //  padding: 9px;
+  //  margin: 0 auto;
+  //  border-radius: 5%;
+  //  background: $lessBlack;
+  //
+  //  img {
+  //    background: $white;
+  //    border-radius: 5%;
+  //    -webkit-filter: grayscale(100%);
+  //    filter: grayscale(100%);
+  //  }
+  //}
 
   h3 {
     color: $fontColor;
@@ -2025,6 +1733,68 @@ section.intro {
   }
 } // end of #reviews
 
+/* Instagram Slideshow */
+#ig {
+  background-color: $white;
+  text-align: center;
+
+  > img {
+    margin: 35px auto;
+  }
+
+  .icarousel {
+
+    .slick-track {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .slick-slide {
+      position: relative;
+      height: inherit;
+      overflow: hidden;
+      margin: 0 15px;
+
+      &:hover {
+        -webkit-transform: scale(0.88);
+        transform: scale(0.88);
+      }
+    }
+
+    .landscape img,
+    .portrait img {
+      position: absolute;
+    }
+
+    .landscape img {
+      height: 100%;
+      max-width: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+  } // end of .icarousel
+
+  > a {
+    display: block;
+    font-size: 44px;
+    font-weight: 900;
+    color: $fontColor;
+    margin: 30px auto;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+
+    &:hover span {
+      color: $fontColor;
+    }
+  }
+}
+
 /***** About Section *****/
 main#dentist,
 main#perio {
@@ -2323,20 +2093,20 @@ main#contact {
     }
   }
 
-  img[alt^="Office"],
-  img[alt^="Contact"] {
-    max-width: 230px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    margin-bottom: 30px;
-  }
+  //img[alt^="Office"],
+  //img[alt^="Contact"] {
+  //  max-width: 230px;
+  //  -webkit-filter: grayscale(100%);
+  //  filter: grayscale(100%);
+  //  margin-bottom: 30px;
+  //}
 
-  img[alt^="Office"] {
-    margin-bottom: 20px;
-    -webkit-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg);
-  }
+  //img[alt^="Office"] {
+  //  margin-bottom: 20px;
+  //  -webkit-transform: rotate(5deg);
+  //  -ms-transform: rotate(5deg);
+  //  transform: rotate(5deg);
+  //}
 
   form#contactForm {
     margin-top: 20px;
@@ -2396,6 +2166,21 @@ main#contact {
   }
 } // end of main#contact
 
+/* Submitted Form */
+#submitted {
+  margin: 10% auto 15%;
+
+  p {
+    font-size: 20px;
+
+    &:first-of-type {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 35px;
+      padding-bottom: 20px;
+    }
+  }
+}
 
 @media (min-width: 751px) {
   #switch {
@@ -2421,7 +2206,7 @@ main#contact {
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-animation: slide 8s linear infinite;
+      //-webkit-animation: slide 8s linear infinite;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
 
@@ -2450,8 +2235,6 @@ main#contact {
     }
   }
 }
-
-
 
 .tri {
   margin: 30px auto;
@@ -2483,7 +2266,7 @@ main#contact {
   content: "+";
   -webkit-transform-origin: center center;
   transform-origin: center center;
-   -webkit-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   display: block;
@@ -2517,9 +2300,9 @@ main#contact {
 .arrow:visited,
 .arrow:hover,
 .arrow:active {
-   color: $hoverColor;
-   text-decoration: none;
- }
+  color: $hoverColor;
+  text-decoration: none;
+}
 
 .arrow:focus {
   color: $fontColor;
@@ -2645,14 +2428,6 @@ main#contact {
   }
 }
 
-@media (max-width: 1050px) {
-  #split figure a {
-    left: 0;
-    bottom: 5px;
-    font-size: 16px;
-  }
-}
-
 @media (max-width: 900px) {
   .style-one {
     font-size: 32px;
@@ -2769,11 +2544,11 @@ main#contact {
     left: 92%;
   }
 
-  section.intro figure {
-    width: 250px;
-    height: 250px;
-    padding: 6px;
-  }
+  //section.intro figure {
+  //  width: 250px;
+  //  height: 250px;
+  //  padding: 6px;
+  //}
 
   main#about,
   main.about,
@@ -2822,11 +2597,11 @@ main#contact {
     }
   } // end of footer
 
-  section.intro figure {
-    width: 200px;
-    height: 200px;
-    padding: 4px;
-  }
+  //section.intro figure {
+  //  width: 200px;
+  //  height: 200px;
+  //  padding: 4px;
+  //}
 
   #switch #split figure {
     img {
@@ -2905,16 +2680,16 @@ main#contact {
     left: 90%;
   }
 
-  section.intro {
-    .row {
-      margin: 35px 0 0;
-    }
-
-    figure {
-      width: 150px;
-      height: 150px;
-    }
-  }
+  //section.intro {
+  //  .row {
+  //    margin: 35px 0 0;
+  //  }
+  //
+  //  figure {
+  //    width: 150px;
+  //    height: 150px;
+  //  }
+  //}
 
   #switch {
     > h2 {
@@ -3184,11 +2959,11 @@ main#contact {
     }
   }
 
-  section.intro figure {
-    width: 100px;
-    height: 100px;
-    padding: 2px;
-  }
+  //section.intro figure {
+  //  width: 100px;
+  //  height: 100px;
+  //  padding: 2px;
+  //}
 
   main#dentist,
   main#perio {
@@ -3243,15 +3018,15 @@ main#contact {
     display: block;
   }
 
-  section.intro .row > div {
-    padding-left: 5px;
-    padding-right: 5px;
-
-    h3 {
-      font-size: 16px;
-      margin: 10px auto 0;
-    }
-  }
+  //section.intro .row > div {
+  //  padding-left: 5px;
+  //  padding-right: 5px;
+  //
+  //  h3 {
+  //    font-size: 16px;
+  //    margin: 10px auto 0;
+  //  }
+  //}
 }
 
 @media (max-width: 400px) {
@@ -3301,10 +3076,10 @@ main#contact {
       font-size: 25px;
     }
 
-    figure {
-      width: 80px;
-      height: 80px;
-    }
+    //figure {
+    //  width: 80px;
+    //  height: 80px;
+    //}
   }
 
   main#contact .row p {
