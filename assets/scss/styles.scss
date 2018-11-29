@@ -2383,6 +2383,11 @@ main#contact {
       min-width: 150px;
       padding: 10px;
       margin-top: 25px;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
     }
   } // end of form#contactForm
 
