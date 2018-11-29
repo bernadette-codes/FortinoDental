@@ -233,10 +233,6 @@ i::before {
   clear: both;
 }
 
-p.has_target {
-  margin: 0;
-}
-
 a[name] {
   display: block;
   cursor: auto !important;
@@ -1307,6 +1303,22 @@ footer {
   }
 } // end of footer
 
+/* Submitted Form */
+#submitted {
+  margin: 10% auto 15%;
+
+  p {
+    font-size: 20px;
+
+    &:first-of-type {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 35px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
 .hours {
   display: table;
   font-size: 20px;
@@ -1619,9 +1631,9 @@ Home and Contact Page *****/
 .carousel-inner img {
   width: 100%;
   height: auto;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin: 0 !important;
+  -webkit-filter: grayscale(70%);
+  filter: grayscale(70%);
+  margin: -5px 0 0 !important;
 }
 
 .carousel-fade {
@@ -2018,6 +2030,15 @@ main#dentist,
 main#perio {
   small {
     display: block;
+  }
+
+  .row {
+    img[alt^="Dr"] {
+      width: 80%;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
+    }
   }
 }
 
@@ -2846,6 +2867,10 @@ main#contact {
 
   main#dentist,
   main#perio {
+    .row img[alt^="Dr"] {
+      width: 50%;
+    }
+
     section.education > div,
     > div ul {
       margin-left:10px
@@ -3200,6 +3225,10 @@ main#contact {
 
     h3 {
       clear: both;
+    }
+
+    .row img[alt^="Dr"] {
+      width: 70%;
     }
   }
 }
