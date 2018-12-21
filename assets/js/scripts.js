@@ -1,7 +1,5 @@
 $(function () {
 
-    $("a[rel*=leanModal]").leanModal();
-
     // Mobile Menu Icon
     $('header nav').meanmenu({
         meanMenuContainer: 'header .place-nav',
@@ -12,90 +10,18 @@ $(function () {
     });
 
     // Header
-    var theWindow = $(window),
-        body = $("body"),
-        headerBottom = $("header").outerHeight();
-
     $("body").css('padding-top', $("header").outerHeight());
 
     $(window).on('resize', function () {
         $("body").css('padding-top', $("header").outerHeight());
     }).trigger('resize');
 
-    if (window.location.hash && theWindow.width() > 900) {
-        body.addClass("fixed");
-    }
 
-    theWindow.on("scroll", function () {
-        if (theWindow.scrollTop() >= 0) {
-            body.addClass('attach');
-        } else if (theWindow.scrollTop() <= 0) {
-            body.removeClass('attach');
-        }
-        if (theWindow.width() > 900) {
-            if (theWindow.scrollTop() >= headerBottom) {
-                body.addClass("fixed");
-            } else if (theWindow.scrollTop() <= headerBottom) {
-                body.removeClass("fixed");
-            }
-        }
-        if (theWindow.width() < 901) {
-            body.removeClass("fixed");
-        }
-    });
+    let first = "Ber"+"na"+"dette",
+        last = "Es"+"ta"+"cio";
 
+    $("body").append("<section><p>Developed by <a href='http://bit.ly/2TQkCM6' title='Link to website developer' target='_blank'>" + first + " " + last + "</a></p></section>");
 
-
-
-
-
-    $(".accordion > h3, .accordion > h2").addClass("toogle");
-    $(".toogle").each(function () {
-        $(this).nextUntil('.toogle').add().wrapAll('<div>');
-    });
-    $(".toogle").on("click", function () {
-        if ($(this).hasClass("active")) {
-            $(this).removeClass("active").next().slideUp();
-        } else {
-            $(".toogle").removeClass("active").next().slideUp();
-            $(this).addClass("active").next().slideDown();
-            for (var i = 0; i < $('.accordion iframe').length; i++) {
-                $('.accordion iframe')[i].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-            }
-        }
-    });
-
-
-
-
-
-
-    // Home Page Featured Services
-    if ($(window).width() > 750) {
-        $("#switch .rotation").cycle({
-            slides: ">div",
-            pager: "#switch #nav",
-            timeout: "10000",
-            paused: true,
-            pagerTemplate: "",
-            autoHeight: "container"
-        });
-    } else {
-        var rotSlides = $("#switch .rotation > *");
-        for (var i = 0; i < rotSlides.length; i++) {
-            var rotSlide = rotSlides[i], rotNavItem = $("#switch #nav li");
-            $(rotSlide).appendTo(rotNavItem[i]);
-        }
-        $("#switch #nav li").on("click", ">span", function () {
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active").next().slideUp();
-            } else {
-                $("#switch #nav li > span").removeClass("active").next().slideUp();
-                $(this).addClass("active").next().slideDown();
-            }
-            return false;
-        });
-    }
 
     // Our Office Carousel
     var slideshows = $('.cycle-slideshow').on('cycle-prev cycle-next', function (e, opts) {
