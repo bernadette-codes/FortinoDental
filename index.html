@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="website">
 
 <head>
     <title>Fortino Dental | General Family & Cosmetic Dentistry in Ancaster, ON</title>
@@ -19,10 +19,10 @@
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/misc.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
-
     <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cookie|Lato:300,300i,400,400i,500,700,700i,900" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,700,700i,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
@@ -33,102 +33,31 @@
 <h1 class="seo">Fortino Dental</h1>
 <h2 class="seo">General Family & Cosmetic Dentistry in Ancaster, ON</h2>
 
-<header>
-    <div class="top-nav flex-ed">
-        <div class="left">
-            <a href="http://bit.ly/2O2joKK" title="Google map" target="_blank" class="log">
-                <i class="icon-location"></i>
-            </a>
-        </div>
-        <div class="right">
-            <a href="tel:19053041000" class="txt" title="Call Fortino Dental">
-                <i class="icon-phone"></i>
-            </a>
-        </div>
-    </div>
+<header data-ng-controller="HeaderController as menu">
     <div class="place-nav">
-        <a title="Fortino logo" class="logo" href="http://www.fortinodental.com/"><img alt="Fortino Dental logo" src="assets/img/logo-fortino-dental.JPG"/></a>
-
-        <div class="info">
-            <a href="tel:19053041000" title="Call Fortino Dental" class="pho"><span>&nbsp; 905-304-1000</span></a>
-            <a href="http://bit.ly/2O2joKK" title="Google map" target="_blank" class="phy"><span>&nbsp;  385 Wilson Street East, Suite 1, Ancaster, Ontario L9G 2C1</span></a>
-        </div>
+        <a title="Fortino logo" class="logo" href="http://www.fortinodental.com/">
+            <img alt="Fortino Dental logo" src="assets/img/logo-fortino-dental2.jpg"/>
+        </a>
 
         <nav id="desktop-nav">
-            <div id="mobile-header" class="flex-ed">
-                <div class="social">
-                    <a href="https://www.instagram.com/fortinodental/" title="instagram" class="ig" target="_blank"><i
-                            class="icon-instagramm"></i></a>
-                    <a href="https://www.facebook.com/FortinoDental" title="facebook" class="fb" target="_blank"><i
-                            class="icon-facebook"></i></a>
-                    <a href="https://www.google.com/maps/place/Fortino+Dental/@43.2281938,-79.9780848,17z/data=!3m1!4b1!4m5!3m4!1s0x882c85b02e6d0515:0x55ad74eec24782dc!8m2!3d43.2281938!4d-79.9758961"
-                       title="google reviews" class="gp" target="_blank"><i class="icon-gplus"></i></a>
-                </div>
-            </div>
             <ul>
-                <li><a href="index.html" title="Fortino Dental">Home</a></li>
-                <li><a href="about.html" title="About us">About</a>
-                    <ul>
-                        <li><a href="about/our-dentist.html" title="Dentist">Our Dentist</a></li>
-                        <li><a href="about/our-periodontist.html" title="Periodontist">Our Periodontist</a></li>
-                        <li><a href="about/our-team.html" title="Team">Our Team</a></li>
-                        <li><a href="about/our-office.html" title="Office">Our Office</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.html" title="Dental Services">Services</a>
-                    <ul>
-                        <li><a href="services/routine.html" title="Routine/Emergency Exams">Routine/Emergency Exams</a></li>
-                        <li><a href="services/dental-hygiene.html" title="Dental Hygiene">Dental Hygiene</a></li>
-                        <li><a href="services/dental-fillings.html" title="Dental Fillings">Dental Fillings</a></li>
-                        <li><a href="services/crowns-bridges-veneers.html" title="Crowns, Bridges, Veneers">Crowns, Bridges, Veneers</a></li>
-                        <li><a href="services/roots-canals.html" title="Roots Canals">Roots Canals</a></li>
-                        <li><a href="services/teeth-whitening.html" title="Teeth Whitening">Teeth Whitening</a></li>
-                        <li><a href="services/invisalign.html" title="Invisalign">Invisalign</a></li>
-                        <li><a href="services/dental-implants.html" title="Dental Implants">Dental Implants</a></li>
-                        <li><a href="services/wisdom-teeth-removal.html" title="Wisdom Teeth Removal">Wisdom Teeth Removal</a></li>
-                        <li><a href="services/sedation.html" title="Sedation">Sedation</a></li>
-                        <li><a href="services/dentures.html" title="Partial and Complete Dentures">Partial and Complete Dentures</a></li>
-                        <li><a href="services/botox.html" title="Botox">Botox</a></li>
-                        <li><a href="services/lip-fillers.html" title="Lip Fillers">Lip Fillers</a></li>
-                        <li><a href="services/nightguards-sportsguards.html" title="Nightguards and Sportsguards">Nightguards and Sportsguards</a></li>
-                        <li><a href="services/periodontics.html" title="Periodontist">Periodontics</a></li>
-                    </ul>
-                </li>
+                <li data-ng-repeat="menu in header">
+                    <a href="{{menu.link}}" title="{{menu.title}}">{{menu.name}}</a>
 
-                <li><a href="gallery.html" title="Gallery">Gallery</a>
-                </li>
-
-                <li><a href="patients.html" title="">Patients</a>
-                </li>
-                <li><a href="contact.html" title="Contact Us">Contact</a>
+                    <ul>
+                        <li data-ng-repeat="page in menu.pages">
+                            <a href="{{page.link}}" title="{{page.title}}">{{page.name}}</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
-            <div id="mobile-footer">
-                <span>Office Hours</span>
-                <p class="hours">
-                    <label>Monday</label> 10:00am - 7:00 pm
-                    <br/>
-                    <label>Tuesday</label> 8:00am - 6:00 pm
-                    <br/>
-                    <label>Wednesday</label> 10:00am - 7:00 pm
-                    <br/>
-                    <label>Thursday</label> 8:00am - 6:00 pm
-                    <br/>
-                    <label>Friday</label> 9:00am - 5:00 pm
-                    <br/>
-                    <label>Saturday</label> 9:00am - 5:00 pm
-                    <br/>
-                    <label>Saturday</label> (once a month)
-                    <br/>
-                    <label>Sunday</label> Emergency only</p>
-            </div>
         </nav>
     </div>
 </header>
 
 <main class="clearfix">
     <div class="index">
-        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel"  data-interval="2500">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel"  data-interval="4000">
 
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -137,29 +66,33 @@
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
                 <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-
                 <div class="item active">
-                    <img src="assets/img/main1.jpg" alt="Beautiful smile" width="1200">
+                    <img src="assets/img/main1.jpg" alt="Dr. Joseph Fortino" width="1200">
                 </div>
 
                 <div class="item">
-                    <img src="assets/img/main2.jpg" alt="Child" width="1200">
+                    <img src="assets/img/main2.jpg" alt="Dental Child Patient" width="1200">
                 </div>
 
                 <div class="item">
-                    <img src="assets/img/main3.jpg" alt="Senior Couple" width="1200">
+                    <img src="assets/img/main3.jpg" alt="Fortino Dental" width="1200">
                 </div>
 
                 <div class="item">
-                    <img src="assets/img/main4.jpg" alt="invisalign" width="1200">
+                    <img src="assets/img/main4.jpg" alt="Fortino Dental" width="1200">
                 </div>
 
                 <div class="item">
-                    <img src="assets/img/main5.jpg" alt="office building" width="1200">
+                    <img src="assets/img/main5.jpg" alt="Invisalign" width="1200">
+                </div>
+
+                <div class="item">
+                    <img src="assets/img/main6.jpg" alt="Fortino office building" width="1200">
                 </div>
             </div>
         </div>
@@ -177,110 +110,98 @@
                 <li>Open 6 days a week</li>
                 <li>Direct Billing</li>
             </ul>
-
-            <!--<div class="row">-->
-                <!--<div class="col-xs-4 wow animated zoomIn" data-wow-delay="0.2s">-->
-                    <!--<figure>-->
-                        <!--<img alt="24-hr Support" src="assets/img/intro-24hour.jpg"/>-->
-                    <!--</figure>-->
-                    <!--<h3>24-hr Support</h3>-->
-                <!--</div>-->
-                <!--<div class="col-xs-4 wow animated zoomIn" data-wow-delay="0.3s">-->
-                    <!--<figure>-->
-                        <!--<img alt="Open 6 days a week" src="assets/img/intro-6days.jpg"/>-->
-                    <!--</figure>-->
-                    <!--<h3>Open 6 days a week</h3>-->
-                <!--</div>-->
-                <!--<div class="col-xs-4 wow animated zoomIn" data-wow-delay="0.4s">-->
-                    <!--<figure>-->
-                        <!--<img alt="Direct Billing" src="assets/img/intro-direct-billing.jpg"/>-->
-                    <!--</figure>-->
-                    <!--<h3>Direct Billing</h3>-->
-                <!--</div>-->
-            <!--</div>-->
         </section>
 
-        <section id="switch">
+        <section data-ng-controller="PanelController as panel" id="switch">
             <h2 class="style-one">Featured Dental Services</h2>
             <ul id="nav">
-                <li><span><span>Invisalign<sup>®</sup></span> <small>Clear Braces</small></span>
+                <li data-ng-class="{ active:panel.isSelected(1)}">
+                    <a href data-ng-click="panel.selectTab(1)">
+                        <span><span>Invisalign<sup>®</sup></span> <small>Clear Braces</small></span>
+                    </a>
                 </li>
-                <li><span>Dental Implants</span></li>
-                <li><span>Wisdom Teeth Removal</span></li>
-                <li><span>Botox / Lip Fillers</span></li>
-                <li><span>Teeth Whitening</span></li>
+                <li data-ng-class="{ active:panel.isSelected(2)}">
+                    <a href data-ng-click="panel.selectTab(2)">
+                        <span>Dental Implants</span>
+                    </a>
+                </li>
+                <li data-ng-class="{ active:panel.isSelected(3)}">
+                    <a href data-ng-click="panel.selectTab(3)">
+                        <span>Wisdom Teeth Removal</span>
+                    </a>
+                </li>
+                <li data-ng-class="{ active:panel.isSelected(4)}">
+                    <a href data-ng-click="panel.selectTab(4)">
+                        <span>Botox / Lip Fillers</span>
+                    </a>
+                </li>
+                <li data-ng-class="{ active:panel.isSelected(5)}">
+                    <a href data-ng-click="panel.selectTab(5)">
+                        <span>Teeth Whitening</span>
+                    </a>
+                </li>
             </ul>
             <div class="rotation">
 
-                <div>
-                    <div id="split">
-                        <article class="t-r" id="invisalign">
-                            <h2 class="style-one"><span>Invisalign<sup>®</sup></span> Clear Braces</h2>
-                            <p>Invisalign is one method of orthodontic treatment that can straighten your smile through a series of invisible, removable and comfortable aligners that virtually no one can tell you are wearing.
-                                Invisalign trays are removable for cleaning and changing to a new set as your teeth move and straighten over time. </p>
-                            <a href="services/invisalign.html" title="learn more" class="btn">Learn more</a>
-                        </article>
-                        <figure>
-                            <img alt="Invisalign" src="assets/img/home-services-invisalign.jpg" height="450" width="450"/>
-                        </figure>
-                    </div>
+                <div data-ng-show="panel.isSelected(1)" class="featured-service">
+                    <article class="t-r" id="invisalign">
+                        <h2 class="style-one"><span>Invisalign<sup>®</sup></span> Clear Braces</h2>
+                        <p>Invisalign is one method of orthodontic treatment that can straighten your smile through a series of invisible, removable and comfortable aligners that virtually no one can tell you are wearing.
+                            Invisalign trays are removable for cleaning and changing to a new set as your teeth move and straighten over time. </p>
+                        <a href="services-invisalign.html" title="learn more" class="btn">Learn more</a>
+                    </article>
+                    <figure>
+                        <img alt="Invisalign" src="assets/img/home-services-invisalign.jpg" height="450" width="450"/>
+                    </figure>
                 </div>
-                <div>
-                    <div id="split">
-                        <article>
-                            <h2 class="style-one">Dental Implants</h2>
-                            <p>Dental implants are the closest possible alternative to actual tooth replacement.
-                                With proper care, maintenance, and regular checkup visits with your dentist, dental implants are designed to last for life.</p>
-                            <a href="services/dental-implants.html" title="learn more" class="btn">Learn more</a>
-                        </article>
-                        <figure>
-                            <img alt="Dental Implants" src="assets/img/home-services-implant.jpg" height="450" width="450"/>
-                        </figure>
-                    </div>
+                <div data-ng-show="panel.isSelected(2)" class="featured-service">
+                    <article>
+                        <h2 class="style-one">Dental Implants</h2>
+                        <p>Dental implants are the closest possible alternative to actual tooth replacement.
+                            With proper care, maintenance, and regular checkup visits with your dentist, dental implants are designed to last for life.</p>
+                        <a href="services-dental-implants.html" title="learn more" class="btn">Learn more</a>
+                    </article>
+                    <figure>
+                        <img alt="Dental Implants" src="assets/img/home-services-implant.jpg" height="450" width="450"/>
+                    </figure>
                 </div>
-                <div>
-                    <div id="split">
-                        <article>
-                            <h2 class="style-one">Wisdom Teeth Removal</h2>
-                            <p>Wisdom teeth do not always have to cause you pain or cause future problems. The movement of surrounding teeth caused by wisdom teeth is often slow, and may not cause any pain.
-                                However, if you or a loved one have had braces or other treatment, crowding from wisdom teeth can potentially undo that work, resulting in crooked and misaligned teeth and jaws, as well as wisdom teeth pain.</p>
-                            <a href="services/wisdom-teeth-removal.html" title="learn more" class="btn">Learn more</a>
-                        </article>
-                        <figure>
-                            <img alt="Wisdom Teeth Removal" src="assets/img/home-services-wisdom.jpg" height="450" width="450"/>
-                        </figure>
-                    </div>
+                <div data-ng-show="panel.isSelected(3)" class="featured-service">
+                    <article>
+                        <h2 class="style-one">Wisdom Teeth Removal</h2>
+                        <p>Wisdom teeth do not always have to cause you pain or cause future problems. The movement of surrounding teeth caused by wisdom teeth is often slow, and may not cause any pain.
+                            However, if you or a loved one have had braces or other treatment, crowding from wisdom teeth can potentially undo that work, resulting in crooked and misaligned teeth and jaws, as well as wisdom teeth pain.</p>
+                        <a href="services-wisdom-teeth-removal.html" title="learn more" class="btn">Learn more</a>
+                    </article>
+                    <figure>
+                        <img alt="Wisdom Teeth Removal" src="assets/img/home-services-wisdom.jpg" height="450" width="450"/>
+                    </figure>
                 </div>
-                <div>
-                    <div id="split">
-                        <article id="botox">
-                            <h2 class="style-one">Botox</h2>
-                            <p>We offer Botox therapeutics to patients looking for pain relief from tension type migraine headaches, TMJ pain and bruxism (grinding of the teeth and teeth clenching).</p>
-                            <a href="services/botox.html" title="learn more" class="btn">Learn more</a>
+                <div data-ng-show="panel.isSelected(4)" class="featured-service">
+                    <article id="botox">
+                        <h2 class="style-one">Botox</h2>
+                        <p>We offer Botox therapeutics to patients looking for pain relief from tension type migraine headaches, TMJ pain and bruxism (grinding of the teeth and teeth clenching).</p>
+                        <a href="services-botox.html" title="learn more" class="btn">Learn more</a>
 
-                            <h2 class="style-one">Lip Fillers</h2>
-                            <p>You might want to try lip fillers, which add or restore fullness to your lips.
-                                Getting lip fillers – which is also known as ‘lip enhancement’ or ‘lip augmentation’ – is relatively painless, and you’ll see the results immediately.</p>
-                            <a href="services/lip-fillers.html" title="learn more" class="btn">Learn more</a>
-                        </article>
-                        <figure>
-                            <img alt="Botox and Lip Filler" src="assets/img/home-services-botox-filler.jpg" height="450" width="450"/>
-                        </figure>
-                    </div>
+                        <h2 class="style-one">Lip Fillers</h2>
+                        <p>You might want to try lip fillers, which add or restore fullness to your lips.
+                            Getting lip fillers – which is also known as ‘lip enhancement’ or ‘lip augmentation’ – is relatively painless, and you’ll see the results immediately.</p>
+                        <a href="services-lip-fillers.html" title="learn more" class="btn">Learn more</a>
+                    </article>
+                    <figure>
+                        <img alt="Botox and Lip Filler" src="assets/img/home-services-botox-filler.jpg" height="450" width="450"/>
+                    </figure>
                 </div>
-                <div>
-                    <div id="split">
-                        <article>
-                            <h2 class="style-one">Teeth Whitening</h2>
-                            <p>Professional in-office teeth whitening as well as follow-up home whitening can be a very visible and cost-effective way to transform your smile to it’s brightest.
-                                At our office we use the Wicked White tooth whitening system.
-                            </p>
-                            <a href="services/teeth-whitening.html" title="learn more" class="btn">Learn more</a>
-                        </article>
-                        <figure>
-                            <img alt="Teeth Whitening" src="assets/img/home-services-whitening.jpg" height="450" width="450"/>
-                        </figure>
-                    </div>
+                <div data-ng-show="panel.isSelected(5)" class="featured-service">
+                    <article>
+                        <h2 class="style-one">Teeth Whitening</h2>
+                        <p>Professional in-office teeth whitening as well as follow-up home whitening can be a very visible and cost-effective way to transform your smile to it’s brightest.
+                            At our office we use the Wicked White tooth whitening system.
+                        </p>
+                        <a href="services-teeth-whitening.html" title="learn more" class="btn">Learn more</a>
+                    </article>
+                    <figure>
+                        <img alt="Teeth Whitening" src="assets/img/home-services-whitening.jpg" height="450" width="450"/>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -361,19 +282,6 @@
         <section id="ig" class="clearfix">
             <img alt="Instagram logo" src="assets/img/social-ig-header.jpg"/>
             <div id="instafeed-gallery-feed" class="icarousel">
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/1.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/2.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/3.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/4.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/5.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/6.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/7.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/8.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/9.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/10.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/11.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/12.jpg" alt="" height="270" width="250"/></a>-->
-                <!--<a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank"><img src="assets/img/ig/13.jpg" alt="" height="270" width="250"/></a>-->
             </div>
             <a href="https://www.instagram.com/fortinodental/" title="instagram" target="_blank">Follow us <span>@fortinodental</span></a>
         </section>
@@ -390,7 +298,6 @@
 <footer>
     <section class="container">
         <h2>Make an Appointment</h2>
-        <!--<img alt="Schedule an appointment" src="assets/img/text-appointmentForm-header.png"/>-->
 
         <!-- Form start -->
         <form action="appointment.php" method="post" name="appointmentForm" id="appointmentForm">
@@ -522,17 +429,17 @@
             <div class="col-md-4">
                 <h3>Office Hours</h3>
                 <p class="hours">
-                    <label>Monday</label> 10:00am - 7:00 pm
+                    <label>Monday</label> 8:00 am - 5:00 pm
                     <br/>
-                    <label>Tuesday</label> 8:00am - 6:00 pm
+                    <label>Tuesday</label> 8:00 am - 6:00 pm
                     <br/>
-                    <label>Wednesday</label> 10:00am - 7:00 pm
+                    <label>Wednesday</label> 10:00 am - 7:00 pm
                     <br/>
-                    <label>Thursday</label> 8:00am - 6:00 pm
+                    <label>Thursday</label> 8:00 am - 6:00 pm
                     <br/>
-                    <label>Friday</label> 9:00am - 5:00 pm
+                    <label>Friday</label> 9:00 am - 5:00 pm
                     <br/>
-                    <label>Saturday</label> 9:00am - 5:00 pm
+                    <label>Saturday</label> 9:00 am - 5:00 pm
                     <br/>
                     <label>Saturday</label> (once a month)
                     <br/>
@@ -544,7 +451,6 @@
         <div class="row copyright">
             <div class="col-xs-12">
                 <p>Copyright © <span id="year"> </span> Fortino Dental. <span class="break">All rights reserved.</span></p>
-                <p id="author">Designed and created by <a href="http://bernadetteengleman.com/" title="Link to website developer" target="_blank">Bernadette Estacio</a></p>
             </div>
         </div>
     </section>
@@ -557,8 +463,8 @@
 <script src="assets/js/scripts.js"></script>
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/slick.min.js"></script>
-
+<script src="assets/js/app.js"></script>
+<!-- Developed by Bernadette Estacio Engleman -->
 </body>
 </html>
 
-<!-- Website developed by Bernadette Estacio Engleman-->
