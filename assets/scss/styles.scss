@@ -12,8 +12,7 @@ html {
 
 body {
   position: relative;
-  background-color: $white;
-  color: $fontColor;
+  @include color($white, $fontColor);
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -89,8 +88,7 @@ dfn {
 }
 
 mark {
-  background-color: #ff0;
-  color: $black;
+  @include color(#ff0, $black);
 }
 
 small {
@@ -289,20 +287,8 @@ h3 {
   letter-spacing: 0;
 }
 
-.style-one, .style-two {
-  display: block;
-}
-
-.style-two {
-  font-size: 19px;
-  line-height: 1.2;
-  color: $white;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0;
-}
-
 .style-one {
+  display: block;
   font-size: 50px;
   line-height: 1;
   color: #2a83c1;
@@ -320,7 +306,6 @@ h2[data-image-src] {
   letter-spacing: 0.05em;
 }
 
-.style-one small,
 #switch #nav li span small {
   font-weight: 400;
 }
@@ -559,8 +544,7 @@ header {
     padding: 8px 6px;
   }
   nav > ul > li:hover > a:hover {
-    color: $white;
-    background: $darkGray;
+    @include color($darkGray, $white);
     text-decoration: none;
   }
   nav ul li:hover > ul {
@@ -598,13 +582,11 @@ header {
   }
   nav ul ul li:hover > a,
   nav ul ul li > a:hover {
-    color: $white;
-    background: $black;
+    @include color($black, $white);
     text-decoration: none;
   }
   body > section {
-    background: $darkGray;
-    color: $white;
+    @include color($darkGray, $white);
     font-size: 12px;
     font-weight: 300;
     padding-bottom: 30px;
@@ -834,16 +816,14 @@ header {
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
-  color: $white;
+  @include color(rgba(0, 0, 0, 0.5), $white);
   text-shadow: 0 2px 2px rgba(30, 32, 33, 0.4);
   padding: 9px;
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 7px;
 }
 
 .close-btn:hover {
-  background-color: #4d4d4d;
-  color: $white;
+  @include color(#4d4d4d, $white);
 }
 
 .close-btn {
@@ -902,8 +882,7 @@ footer {
     input.form-control,
     select.form-control,
     textarea.form-control {
-      background: $white;
-      color: $fontColor;
+      @include color($white, $fontColor);
       font-size: 16px;
       line-height: 1.75;
       border: 0;
@@ -1365,8 +1344,7 @@ section.intro {
 
 /* Featured Services */
 #switch {
-  background: $darkGray;
-  color: $white;
+  @include color($darkGray, $white);
   padding: 60px 10px;
   text-align: center;
 
@@ -1422,8 +1400,7 @@ section.intro {
       }
 
       &.active a {
-        color: $fontColor;
-        background: $white;
+        @include color($white, $fontColor);
       }
     } // end of #switch #nav li
   }
@@ -2002,8 +1979,7 @@ main#contact {
 
     input.form-control,
     textarea.form-control {
-      background: $darkColor;
-      color: $white;
+      @include color($darkColor, $white);
       border: 1px solid $darkGray;
       border-radius: 0;
 
@@ -2308,8 +2284,7 @@ main#contact {
 
 @media (max-width: 900px) {
   body > section {
-    background: $darkGray;
-    color: $white;
+    @include color($darkGray, $white);
     font-size: 12px;
     font-weight: 300;
     padding-bottom: 30px;
