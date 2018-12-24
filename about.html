@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="website">
+
+<head>
+    <title>About Fortino Dental | General Family & Cosmetic Dentistry in Ancaster, ON</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="Fortino Dental is a comprehensive dental office conveniently located in beautiful Ancaster and serves the Ancaster, Dundas, Hamilton and surrounding communities.">
+    <meta name="keywords" content="dentist near me, dentist Ancaster Ontario, dentist Hamilton Ontario, dentist Dundas Ontario, dentist Burlington Ontario, dentist Waterdown Ontario, invisalign near me, wisdom teeth removal near me, botox near me, lip filler near me">
+    <meta name="geo.region" content="CA-ON" />
+    <meta name="geo.placename" content="Hamilton" />
+    <meta name="geo.position" content="43.228181;-79.975877" />
+    <meta name="ICBM" content="43.228181, -79.975877" />
+    <meta name="author" content="Bernadette Estacio">
+    <link rel="shortcut icon" href="assets/img/logo-favicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/misc.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,700,700i,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body class="page_index">
+
+<h1 class="seo">Fortino Dental</h1>
+<h2 class="seo">General Family & Cosmetic Dentistry in Ancaster, ON</h2>
+
+<header data-ng-controller="HeaderController as menu">
+    <div class="place-nav">
+        <a title="Fortino logo" class="logo" href="http://www.fortinodental.com/">
+            <img alt="Fortino Dental logo" src="assets/img/logo-fortino-dental2.jpg"/>
+        </a>
+
+        <nav id="desktop-nav">
+            <ul>
+                <li data-ng-repeat="menu in header">
+                    <a href="{{menu.link}}" title="{{menu.title}}">{{menu.name}}</a>
+
+                    <ul>
+                        <li data-ng-repeat="page in menu.pages">
+                            <a href="{{page.link}}" title="{{page.title}}">{{page.name}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="clearfix about" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About</h2>
+
+                <p>Fortino Dental is a comprehensive dental office conveniently located in beautiful Ancaster and serves the Ancaster, Dundas, Hamilton and surrounding communities.
+                    The office is operated by <strong>Dr. Joseph Fortino</strong> and his highly trained and professional staff.
+                    Fortino Dental strives to provide the best in general and cosmetic dentistry to the community by offering the most conservative and innovative options available in dentistry today.
+                </p>
+
+                <p>Our brand new office is equipped with the latest in dental technology including digital x-rays, allowing us to be on the cutting edge in both comfort and care.
+                    Dr. Fortino and his staff work hard to make sure patients leave with a bright smile on their face, and maintain it for years to come.
+                </p>
+            </div>
+            <div class="col-md-6 img-space">
+                <img alt="About Fortino Dental" src="assets/img/about/about.jpg" class="img-responsive"/>
+            </div>
+        </div>
+
+        <p>Make an appointment with us and know you are in the hands of a caring, compassionate and skilled dental team.
+        </p>
+    </div>
+</main>
+
+<footer>
+    <section class="container">
+        <h2>Make an Appointment</h2>
+
+        <!-- Form start -->
+        <form action="appointment.php" method="post" name="appointmentForm" id="appointmentForm">
+            <div class="row">
+
+                <!-- Name -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="firstName" class="sr-only">First Name</label>
+                        <input id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" title="Your first name is required" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastName" class="sr-only">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md" title="Your last name is required" required>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone" class="sr-only">Phone number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="Phone number" class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email address</label>
+                        <input id="email" name="email" type="email" placeholder="E-Mail" class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Preferred Day -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="day" class="sr-only">Preferred Day</label>
+                        <select id="day" name="day" class="form-control" required>
+                            <option value="" disabled selected>Preferred Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Preferred Time -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="preferred-time" class="sr-only">Preferred Time</label>
+                        <input id="preferred-time" name="preferred-time" type="text" placeholder="Preferred Time" class="form-control input-md" title="Your preferred time is required" required>
+                    </div>
+                </div>
+
+                <!-- Patient -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="patient" class="sr-only">Are you..</label>
+                        <select id="patient" name="patient" class="form-control" required>
+                            <option value="" disabled selected>Are you..</option>
+                            <option value="New Patient">A New Patient</option>
+                            <option value="Existing Patient">An Existing Patient</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Hear from -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="hearFrom" class="sr-only">How did you hear about us?</label>
+                        <input id="hearFrom" name="hearFrom" type="text" placeholder="How did you hear about us?" class="form-control" title="How did you hear about us?" required>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" name="message" placeholder="Message" rows="5" class="form-control" title="Your message is required" required></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <div class="g-recaptcha" data-sitekey="6Lf-I3wUAAAAAGJkiOYrFddE57Jf2ftBVVzVGKvw"></div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-md-12 form-group">
+                    <button id="submit-button" name="submit-button" class="btn btn-alt">Submit</button>
+                </div>
+            </div>
+        </form>
+        <!-- form end -->
+    </section>
+
+    <section class="container">
+        <div class="row" id="footer-header">
+            <div class="col-md-4">
+                <a href="index.html" title="Fortino Dental logo" class="logo">
+                    <img alt="Fortino Dental logo" src="assets/img/logo-fortino-badge.png">
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="tel:19053041000" title="Call Fortino Dental" class="phone">905-304-1000</a>
+                <a href="mailto:info@fortinodental.com" title="Fortino Dental Email">info@fortinodental.com</a>
+                <a href="http://bit.ly/2O2joKK" title="Google map" target="_blank" class="loc">385 Wilson Street East, Suite 1,<br> Ancaster, Ontario L9G 2C1 </a>
+                <div class="social">
+                    <a href="https://www.instagram.com/fortinodental/" title="instagram" class="ig" target="_blank">
+                        <span>Follow us <small>on instagram</small></span>
+                        <i class="icon-instagramm"></i>
+                    </a>
+                    <a href="https://www.facebook.com/FortinoDental" title="facebook"  class="fb" target="_blank">
+                        <span>like us <small>on facebook</small></span>
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/place/Fortino+Dental/@43.2281938,-79.9780848,17z/data=!3m1!4b1!4m7!3m6!1s0x882c85b02e6d0515:0x55ad74eec24782dc!8m2!3d43.2281938!4d-79.9758961!9m1!1b1"
+                       title="Google" class="gp" target="_blank">
+                        <span>review us <small>on google+</small></span>
+                        <i class="icon-gplus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Office Hours</h3>
+                <p class="hours">
+                    <label>Monday</label> 8:00 am - 5:00 pm
+                    <br/>
+                    <label>Tuesday</label> 8:00 am - 6:00 pm
+                    <br/>
+                    <label>Wednesday</label> 10:00 am - 7:00 pm
+                    <br/>
+                    <label>Thursday</label> 8:00 am - 6:00 pm
+                    <br/>
+                    <label>Friday</label> 9:00 am - 5:00 pm
+                    <br/>
+                    <label>Saturday</label> 9:00 am - 5:00 pm
+                    <br/>
+                    <label>Saturday</label> (once a month)
+                    <br/>
+                    <label>Sunday</label> Emergency only
+                </p>
+            </div>
+        </div>
+
+        <div class="row copyright">
+            <div class="col-xs-12">
+                <p>Copyright © <span id="year"> </span> Fortino Dental. <span class="break">All rights reserved.</span></p>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- Developed by Bernadette Estacio Engleman -->
+</body>
+</html>
