@@ -1,0 +1,65 @@
+@mixin color($bg, $color) {
+  background-color: $bg;
+  color: $color;
+}
+
+@mixin link($color) {
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin marginPadding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin marginCenter($topBottom: 0) {
+  margin: $topBottom auto;
+}
+
+@mixin marginTB($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin displayFlex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexFlow($prop) {
+  -ms-flex-flow: $prop;
+  -webkit-flex-flow: $prop;
+  flex-flow: $prop;
+}
+
+@mixin flexJustifyContent($prop, $prop1) {
+  -webkit-box-pack: $prop1;
+  -moz-box-pack: $prop1;
+  -ms-flex-pack: $prop1;
+  -webkit-justify-content: $prop;
+  justify-content: $prop;
+}
+
+@mixin flexAlignItems {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@mixin transformRotate($x) {
+  -webkit-transform: rotate($x);
+  -ms-transform: rotate($x);
+  transform: rotate($x);
+}
+
+@mixin transition($x) {
+  -webkit-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
