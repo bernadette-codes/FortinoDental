@@ -1,6 +1,5 @@
 @import "variables";
 @import "mixins";
-@import "extend";
 
 html {
   font-family: sans-serif;
@@ -241,9 +240,8 @@ a[name]:before {
 }
 
 a {
+  @include link($fontColor);
   cursor: pointer;
-  text-decoration: none;
-  color: $fontColor;
 
   &:hover {
     color: $hoverColor;
@@ -303,13 +301,8 @@ h2[data-image-src] {
   letter-spacing: 0.05em;
 }
 
-#switch #nav li span small {
-  font-weight: 400;
-}
-
-.btn,
-.btn-alt, h2 strong,
-.hours label, #switch #nav li span, .tabs,
+h2 strong,
+.hours label, .tabs,
 .tabs strong, table thead th, table tbody tr.o td:first-child {
   font-weight: 900;
 }
@@ -346,18 +339,19 @@ main ul li:before {
 
 .btn, .btn-alt {
   position: relative;
-  z-index: 1;
   display: inline-block;
   vertical-align: middle;
-  cursor: pointer;
-  overflow: hidden;
-  text-align: center;
   color: $white;
   font-size: 16px;
+  font-weight: 900;
   line-height: 1.18;
   min-width: 250px;
   @include marginPadding(5px, 17px);
+  text-align: center;
   border-radius: 27px;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .btn {
@@ -503,8 +497,8 @@ header {
     padding: 8px 6px;
   }
   nav > ul > li:hover > a:hover {
-    @include color($darkGray, $white);
-    text-decoration: none;
+    background-color: $darkGray;
+    @include link($white);
   }
   nav ul li:hover > ul {
     display: block;
@@ -541,8 +535,8 @@ header {
   }
   nav ul ul li:hover > a,
   nav ul ul li > a:hover {
-    @include color($black, $white);
-    text-decoration: none;
+    background-color: $black;
+    @include link($white);
   }
   body > section {
     @include color($darkGray, $white);
@@ -557,8 +551,7 @@ header {
       &:link,
       &:visited,
       &:active {
-        text-decoration: none;
-        color: $white;
+        @include link($white);
       }
 
       &:hover {
@@ -680,13 +673,12 @@ header {
   }
   .mean-container .mean-nav ul li a {
     display: block;
+    @include link($white);
     padding: 1em 5%;
     padding-right: 58px !important;
     margin: 0;
     text-align: left;
-    color: $white;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
-    text-decoration: none;
   }
   .mean-container .mean-nav ul li li a {
     padding: 1em 10%;
@@ -883,16 +875,14 @@ footer {
   a.loc:visited,
   a.loc:active {
     display: block;
-    color: $white;
+    @include link($white);
     padding-bottom: 10px;
-    text-decoration: none;
   }
 
   a.phone:hover,
   a[href^="mailto"]:hover,
   a.loc:hover {
-    color: $hoverColor;
-    text-decoration: none;
+    @include link($hoverColor);
   }
 
   a.phone {
@@ -1332,6 +1322,14 @@ section.intro {
       &.active a {
         @include color($white, $fontColor);
       }
+
+      span {
+        font-weight: 900;
+
+        small {
+          font-weight: 400;
+        }
+      }
     } // end of #switch #nav li
   }
 
@@ -1437,9 +1435,8 @@ section.intro {
 
   a.arrow {
     font-size: 78px;
-    color: $white;
+    @include link($white);
     opacity: 0.7;
-    text-decoration: none;
 
     &:visited,
     &:hover,
@@ -1830,13 +1827,11 @@ main#patients {
     a,
     &:visited,
     a:active {
-      color: $fontColor;
+      @include link($fontColor);
       margin-left: 5%;
-      text-decoration: none;
 
       &:hover span {
-        color: $hoverColor;
-        text-decoration: none;
+        @include link($hoverColor);
       }
     }
 
@@ -1874,12 +1869,10 @@ main#contact {
       a,
       &:visited,
       a:active {
-        color: $fontColor;
-        text-decoration: none;
+        @include link($fontColor);
 
         &:hover {
-          color: $hoverColor;
-          text-decoration: none;
+          @include link($hoverColor);
         }
       }
     }
@@ -2058,13 +2051,11 @@ main#contact {
 .arrow:visited,
 .arrow:hover,
 .arrow:active {
-  color: $hoverColor;
-  text-decoration: none;
+  @include link($hoverColor);
 }
 
 .arrow:focus {
-  color: $fontColor;
-  text-decoration: none;
+  @include link($fontColor);
 }
 
 .arrow i, .arrow i:before {
@@ -2200,8 +2191,7 @@ main#contact {
       &:link,
       &:visited,
       &:active {
-        text-decoration: none;
-        color: $white;
+        @include link($white);
       }
 
       &:hover {
