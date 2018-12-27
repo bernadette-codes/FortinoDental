@@ -165,8 +165,7 @@ button:-moz-focusring, input:-moz-focusring {
 
 fieldset {
   border: 1px solid silver;
-  margin: 0 2px;
-  padding: .35em .625em .75em;
+  @include marginPadding(0 2px, .35em .625em .75em);
 }
 
 legend {
@@ -199,9 +198,9 @@ address {
 }
 
 img {
-  max-width: 100%;
   display: block;
-  margin: 0 auto;
+  max-width: 100%;
+  @include marginCenter;
 }
 
 *, *::before, *::after {
@@ -211,13 +210,11 @@ img {
 }
 
 *::before, *::after, a, #switch a span.btn {
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  @include transition(all .4s);
 }
 
 i::before {
-  -webkit-transition: none;
-  transition: none;
+  @include transition(none);
 }
 
 .clearfix:before, .clearfix:after {
@@ -256,11 +253,11 @@ a {
 hr {
   position: relative;
   display: table;
-  clear: both;
-  margin: 60px auto;
   width: 100%;
   height: 3px;
   background-color: #2a83c1;
+  clear: both;
+  @include marginCenter(60px);
   opacity: 0.5;
 }
 
@@ -335,24 +332,11 @@ main ul li:before {
   color: $fontColor;
 }
 
-.flex-ed, .col-flex-ed {
-  display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.flex-ed{
+  @include displayFlex;
+  @include flexFlow(row wrap);
 }
 
-.flex-ed {
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-}
-
-.col-flex-ed {
-  flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   #switch #nav li a {
@@ -372,8 +356,7 @@ main ul li:before {
   font-size: 16px;
   line-height: 1.18;
   min-width: 250px;
-  margin: 5px;
-  padding: 17px;
+  @include marginPadding(5px, 17px);
   border-radius: 27px;
 }
 
@@ -406,8 +389,7 @@ main {
 main ul {
   list-style: none;
   overflow: hidden;
-  padding: 0;
-  margin: 10px 0;
+  @include marginPadding(10px 0, 0);
 }
 
 main ul li {
@@ -442,13 +424,10 @@ main ul.divided li {
 }
 
 h2[data-image-src] {
-  padding: 10px;
   min-height: 400px;
   background-size: cover !important;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  padding: 10px;
+  @include flexJustifyContent(center, center);
 }
 
 @media (min-width: 830px) {
@@ -483,47 +462,27 @@ header {
   header .place-nav {
     max-width: 1260px;
     height: 82px;
-    margin: 0 auto;
-    padding: 0 10px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    @include displayFlex;
+    @include flexFlow(row wrap);
+    @include flexJustifyContent(space-between, justify);
+    @include flexAlignItems;
+    @include marginPadding(0 auto, 0 10px);
   }
   header .logo img {
     height: 60px;
     margin: 10px 0;
   }
   header nav > ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    @include displayFlex;
+    @include flexFlow(row nowrap);
+    @include flexJustifyContent(space-around, distribute);
   }
   nav, nav ul li, nav ul li a {
     position: relative;
   }
   nav ul {
+    @include marginPadding(0, 0);
     list-style: none;
-    margin: 0;
-    padding: 0;
   }
   nav ul li a {
     display: block;
@@ -531,7 +490,7 @@ header {
   }
   nav > ul {
     font-size: 0;
-    margin: 0 auto;
+    @include marginCenter;
   }
   nav > ul > li {
     display: inline-block;
@@ -645,8 +604,7 @@ header {
     background: $darkGray;
   }
   body, header, .mean-container .mean-nav {
-    -webkit-transition: all .08s;
-    transition: all .08s;
+    @include transition(all .08s);
   }
   body {
     right: 0;
@@ -676,17 +634,9 @@ header {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    @include flexFlow(row nowrap);
+    @include flexJustifyContent(space-between, justify);
+    @include flexAlignItems;
   }
   .mean-container .mean-bar, header .logo {
     margin: 5px;
@@ -699,9 +649,7 @@ header {
     width: 40px;
   }
   .mean-container a.meanmenu-reveal.meanclose {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    @include transformRotate(45deg);
   }
   .mean-container .mean-bar > i {
     display: block;
@@ -717,19 +665,13 @@ header {
     bottom: 0;
     width: 80%;
     overflow: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
+    @include displayFlex;
+    @include flexFlow(column);
   }
   .mean-container .mean-nav ul {
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
     width: 100%;
+    font-size: 16px;
+    @include marginPadding(0, 0);
     list-style-type: none;
   }
   .mean-container .mean-nav ul li {
@@ -836,9 +778,7 @@ header {
 
 .close-btn i {
   margin-right: 8px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  @include transformRotate(45deg);
 }
 
 .index {
@@ -853,8 +793,7 @@ footer {
   color: $white;
   font-size: 16px;
   line-height: 1.75;
-  margin: 0 auto;
-  padding: 60px 0 0;
+  @include marginPadding(0 auto, 60px 0 0);
   text-align: center;
 
   h2 {
@@ -975,8 +914,7 @@ footer {
   .social a {
     height: 90px;
     font-weight: 900;
-    margin: 20px 5px 50px;
-    padding: 8px;
+    @include marginPadding(20px 5px 50px, 8px);
     text-align: left;
     vertical-align: top;
     text-transform: uppercase;
@@ -1048,8 +986,8 @@ footer {
 
     i:before {
       display: block;
-      margin: 0 auto;
       width: 40px;
+      @include marginCenter;
       line-height: 40px;
     }
 
@@ -1199,8 +1137,7 @@ main.services {
 
     h3 {
       font-size: 30px;
-      margin-top: 35px;
-      margin-bottom: 15px;
+      @include marginTB(35px, 15px);
     }
 
     p {
@@ -1353,27 +1290,20 @@ section.intro {
     text-align: center;
 
     li {
-      margin: 0;
-      padding: 0;
-      -webkit-transition: all .4s;
-      transition: all .4s;
+      @include marginPadding(0, 0);
+      @include transition(all .4s);
 
       &:before {
         display: none;
       }
 
       a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        min-height: 53px;
+        @include displayFlex;
+        @include flexFlow(column);
+        @include flexJustifyContent(center, center);
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        min-height: 53px;
         color: $white;
         font-size: 16px;
         line-height: 1.18;
@@ -1406,20 +1336,10 @@ section.intro {
   }
 
   .featured-service {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    @include displayFlex;
+    @include flexFlow(row nowrap);
+    @include flexJustifyContent(center, center);
+    @include flexAlignItems;
 
     article {
       margin-right: 15px;
@@ -1428,8 +1348,7 @@ section.intro {
         max-width: 419px;
         font-size: 20px;
         line-height: 1.5;
-        margin-top: 20px;
-        margin-bottom: 25px;
+        @include marginTB(20px, 25px);
       }
 
       a.btn {
@@ -1481,9 +1400,7 @@ section.intro {
   }
 
   .featured-service {
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    @include flexJustifyContent(space-around, distribute);
   }
 
   h2.style-one {
@@ -1504,11 +1421,11 @@ section.intro {
 /* Dental Association */
 #assoc {
   max-width: 800px;
+  @include marginCenter(55px);
   text-align: center;
-  margin: 55px auto;
 
   img {
-    margin: 0 auto;
+    @include marginCenter;
   }
 }
 
@@ -1539,7 +1456,7 @@ section.intro {
   .cycle-slideshow {
     max-width: 1000px;
     background-color: white;
-    margin: 0 auto;
+    @include marginCenter;
     border-radius: 10px;
     box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
 
@@ -1568,7 +1485,7 @@ section.intro {
       color: $white;
       font-size: 21px;
       line-height: 74px;
-      margin: 0 auto;
+      @include marginCenter;
       border-radius: 50%;
       box-shadow: 0 0 0 5px #bdbdbd;
 
@@ -1603,7 +1520,7 @@ section.intro {
 
   .pager {
     display: block;
-    margin: 15px auto;
+    @include marginCenter(15px);
 
     span {
       background-color: $white;
@@ -1622,14 +1539,14 @@ section.intro {
   text-align: center;
 
   > img {
-    margin: 35px auto;
+    @include marginCenter(35px);
   }
 
   .icarousel {
 
     .slick-track {
-      display: flex;
-      flex-flow: row wrap;
+      @include displayFlex;
+      @include flexFlow(row wrap);
     }
 
     .slick-slide {
@@ -1640,6 +1557,7 @@ section.intro {
 
       &:hover {
         -webkit-transform: scale(0.88);
+        -ms-transform: scale(0.88);
         transform: scale(0.88);
       }
     }
@@ -1663,7 +1581,7 @@ section.intro {
     font-size: 44px;
     font-weight: 900;
     color: $fontColor;
-    margin: 30px auto;
+    @include marginCenter(30px);
 
     &:link,
     &:visited,
@@ -1791,14 +1709,12 @@ main#gallery {
 
   h3 {
     font-size: 30px;
-    margin-top: 45px;
-    margin-bottom: 30px;
+    @include marginTB(45px, 30px);
     text-align: center;
   }
 
   .row { // side by side photos
-    margin-top: 30px;
-    margin-bottom: 40px;
+    @include marginTB(30px, 40px);
 
     &.compare-row {
       display: none;
@@ -1824,8 +1740,8 @@ main#gallery {
   }
 
   section.photo-compare {
-    display: flex;
-    justify-content: center;
+    @include displayFlex;
+    @include  flexJustifyContent(center, center);
     margin-bottom: 40px;
   }
 
@@ -1903,8 +1819,7 @@ main#gallery {
 main#patients {
   h3 {
     font-size: 30px;
-    margin-top: 35px;
-    margin-bottom: 15px;
+    @include marginTB(35px, 15px);
   }
 
   .row {
@@ -2051,22 +1966,16 @@ main#contact {
 
     .rotation {
       max-width: 1200px;
-      margin: 0 auto;
+      @include marginCenter;
     }
 
     #nav {
       max-width: 760px;
-      margin: 0 auto 30px;
-      padding: 3px;
       background: $lessBlack;
+      @include displayFlex;
+      @include flexFlow(row wrap);
+      @include marginPadding(0 auto 30px, 3px);
       border-radius: 29px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
 
       li {
         -webkit-box-flex: 1;
@@ -2091,15 +2000,11 @@ main#contact {
 }
 
 .tri {
-  margin: 30px auto;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  @include marginCenter(30px);
+  @include flexFlow(row nowrap);
+  @include flexAlignItems;
   -ms-grid-row-align: center;
-  align-items: center;
+
 }
 
 .modal-close {
@@ -2118,12 +2023,11 @@ main#contact {
 
 .modal-close:before {
   content: "+";
-  -webkit-transform-origin: center center;
-  transform-origin: center center;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
   display: block;
+  @include transformRotate(45deg);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
 }
 
 .cycle-slideshow, .cycle-slide {
@@ -2133,7 +2037,7 @@ main#contact {
 
 .cycle-slideshow > * {
   right: 0;
-  margin: 0 auto;
+  @include marginCenter;
 }
 
 .arrow, .pager {
@@ -2165,7 +2069,7 @@ main#contact {
 
 .arrow i, .arrow i:before {
   display: block;
-  margin: 0 auto;
+  @include marginCenter;
 }
 
 .arrow:hover img {
@@ -2261,6 +2165,7 @@ main#contact {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   .side-by-side #prev {
@@ -2271,8 +2176,7 @@ main#contact {
   }
   #carousel .side-by-side {
     max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 80px;
+    @include marginPadding(0 auto, 0 80px);
   }
   #carousel .side-by-side .arrow {
     font-size: 80px;
@@ -2356,11 +2260,6 @@ main#contact {
 }
 
 
-
-
-
-
-
 @-webkit-keyframes slide {
   from {
     background-position: 0 0;
@@ -2374,7 +2273,7 @@ main#contact {
   .icarousel {
     position: relative;
     max-width: 1600px;
-    margin: 0 auto;
+    @include marginCenter;
 
     &:before,
     &:after {
@@ -2388,13 +2287,17 @@ main#contact {
 
     &:before {
       left: 0;
+      background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
       background: -webkit-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+      background: -o-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
       background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
     }
 
     &:after {
       right: 0;
+      background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
       background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+      background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
       background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
     }
   } // end of .icarousel
@@ -2477,7 +2380,7 @@ main#contact {
   }
 
   #assoc {
-    margin: 20px auto;
+    @include marginCenter(20px);
   }
 
   #reviews {
@@ -2492,7 +2395,7 @@ main#contact {
 
   #ig > a {
     font-size: 30px;
-    margin: 15px auto;
+    @include marginCenter(15px);
   }
 
   .icarousel .slick-slide {
@@ -2565,7 +2468,7 @@ main#contact {
   }
 
   #assoc img {
-    margin: 20px auto;
+    @include marginCenter(20px);
   }
 
   #reviews .btn {
@@ -2630,9 +2533,7 @@ main#contact {
     }
 
     .row {
-      margin-top: 0;
-      margin-bottom: 25px;
-
+      @include marginTB(0, 25px);
 
       &.compare-row {
         display: block;
@@ -2676,14 +2577,9 @@ main#contact {
 
       li a {
         min-height: 45px;
-        -webkit-flex-flow: row nowrap;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
+        @include flexFlow(row nowrap);
+        @include flexAlignItems;
         -ms-grid-row-align: center;
-        align-items: center;
 
         small {
           font-size: inherit;
