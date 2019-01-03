@@ -1618,6 +1618,34 @@ main#dentist {
     }
   }
 
+  .songs {
+    margin-bottom: 30px;
+
+    img {
+      box-shadow: 1.5px 2.6px 13px rgba(24, 23, 24, 0.65);
+    }
+
+    > div:last-of-type {
+      padding-left: 5%;
+
+      .song {
+        margin-bottom: 30px;
+
+        h3 {
+          display: inline-block;
+          width: 120px;
+          margin-right: 10px;
+        }
+
+        audio {
+          margin-bottom: -10px;
+          border: 1px solid $darkGray;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+
   > div {
     figure {
 
@@ -1694,8 +1722,20 @@ main#office #carousel #cycle-1 img {
 }
 
 /***** Services Section *****/
-main.services > div ul {
-  margin-left: 20px;
+main.services {
+  > div ul {
+    margin-left: 20px;
+  }
+
+  img[alt="Invisalign Gold"] {
+    width: 100%;
+    margin-top: 80px;
+    box-shadow: none;
+  }
+
+  .invisalign-gold {
+    display: none;
+  }
 }
 
 /***** Gallery Page *****/
@@ -2218,8 +2258,22 @@ main#contact {
   .featured-service figure a {
     bottom: 65%;
   }
+  main#dentist {
+    .songs {
+      > div:last-of-type {
+        .song {
+          h3 {
+            width: 90px;
+            margin-right: 0;
+          }
+          audio {
+            margin-bottom: -20px;
+          }
+        }
+      }
+    }
+  }
 }
-
 
 @-webkit-keyframes slide {
   from {
@@ -2369,9 +2423,14 @@ main#contact {
       margin-top: 0;
     }
 
-    img:not([alt^="Fortino"]) {
-      margin: 35px auto 25px;
+    img:not([alt^="Fortino"]){
       width: 85%;
+      margin: 35px auto 25px;
+    }
+
+    img[alt="Invisalign Gold"] {
+      width: 100%;
+      margin-top: 100px;
     }
   }
 
@@ -2391,6 +2450,25 @@ main#contact {
     .row {
       img[alt^="Dr"] {
         margin-top: 0;
+      }
+    }
+
+    .songs {
+      img {
+        width: 70%;
+        margin-bottom: 40px;
+      }
+
+      > div:last-of-type {
+        padding-left: 0;
+
+        .song {
+          text-align: center;
+
+          h3 {
+            text-align: left;
+          }
+        }
       }
     }
   }
@@ -2480,11 +2558,23 @@ main#contact {
     }
   }
 
-  main.services > div ul {
-    margin-left: 0;
+  main.services > div {
+    ul {
+      margin-left: 0;
 
-    li {
-      padding-left: 35px;
+      li {
+        padding-left: 35px;
+      }
+    }
+
+    img[alt="Invisalign Gold"] {
+      width: 25%;
+      margin: 0 auto;
+    }
+
+    .invisalign-gold {
+      display: block;
+      margin: -20px auto 20px;
     }
   }
 
@@ -2672,6 +2762,12 @@ main#contact {
     display: block;
     padding-left: 30px;
   }
+
+  main.services > div {
+    img[alt="Invisalign Gold"] {
+      width: 35%;
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -2705,6 +2801,28 @@ main#contact {
 
     .row img[alt^="Dr"] {
       width: 70%;
+    }
+  }
+}
+
+@media (max-width: 446px) {
+  main#dentist {
+    .songs {
+      > div:last-of-type {
+        .song {
+          margin-bottom: 15px;
+
+          h3 {
+            margin-bottom: 10px;
+            text-align: center;
+          }
+          audio {
+            margin-bottom: 0;
+            width: 90%;
+            box-sizing: border-box;
+          }
+        }
+      }
     }
   }
 }
