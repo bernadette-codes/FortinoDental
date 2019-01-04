@@ -65,73 +65,18 @@
 
         <p>Dr. Fortino and his staff work hard to make sure patients leave with a bright smile on their face, and maintain it for years to come.</p>
 
-        <section>
+        <section data-ng-controller="TeamController as photos">
             <div class="row">
-                <div class="col-md-6">
+                <div data-ng-repeat="photo in photos" class="col-md-{{photo.columnSpace}}">
                     <div class="panel text-center">
                         <div class="panel-heading">
-                            <h3>Office Manager / Receptionist</h3>
+                            <h3>{{photo.title}}</h3>
                         </div>
                         <div class="panel-body">
-                            <img src="assets/img/about/team-rhonda.jpg" alt="Rhonda">
+                            <img src="assets/img/about/{{photo.photoFileName}}" alt="{{photo.name}}">
                         </div>
                         <div class="panel-footer">
-                            <h4>Rhonda</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel text-center">
-                        <div class="panel-heading">
-                            <h3>Dental Assistant</h3>
-                        </div>
-                        <div class="panel-body">
-                            <img src="assets/img/about/team-hannah.jpg" alt="Hannah">
-                        </div>
-                        <div class="panel-footer">
-                            <h4>Hannah</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="panel text-center">
-                        <div class="panel-heading">
-                            <h3>Dental Hygienists</h3>
-                        </div>
-                        <div class="panel-body">
-                            <img src="assets/img/about/team-jenniferF.jpg" alt="Jennifer F.">
-                        </div>
-                        <div class="panel-footer">
-                            <h4>Jennifer F.</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="panel text-center">
-                        <div class="panel-heading">
-                            <h3>Dental Hygienists</h3>
-                        </div>
-                        <div class="panel-body">
-                            <img src="assets/img/about/team-jenniferC.jpg" alt="Jennifer C.">
-                        </div>
-                        <div class="panel-footer">
-                            <h4>Jennifer C.</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="panel text-center">
-                        <div class="panel-heading">
-                            <h3>Dental Hygienists</h3>
-                        </div>
-                        <div class="panel-body">
-                            <img src="assets/img/about/team-marisa.jpg" alt="Marisa">
-                        </div>
-                        <div class="panel-footer">
-                            <h4>Marisa</h4>
+                            <h4>{{photo.name}}</h4>
                         </div>
                     </div>
                 </div>
