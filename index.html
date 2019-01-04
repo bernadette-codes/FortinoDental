@@ -21,8 +21,8 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,700,700i,900" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>-->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
@@ -33,7 +33,7 @@
 <h1 class="seo">Fortino Dental</h1>
 <h2 class="seo">General Family & Cosmetic Dentistry in Ancaster, ON</h2>
 
-<header data-ng-controller="HeaderController as menu">
+<header data-ng-controller="MenuController as menu">
     <div class="place-nav">
         <a title="Fortino logo" class="logo" href="http://www.fortinodental.com/">
             <img alt="Fortino Dental logo" src="assets/img/logo-fortino-dental2.jpg"/>
@@ -41,12 +41,12 @@
 
         <nav id="desktop-nav">
             <ul>
-                <li data-ng-repeat="menu in header">
-                    <a href="{{menu.link}}" title="{{menu.title}}">{{menu.name}}</a>
+                <li data-ng-repeat="menu in menu">
+                    <a href="{{menu.link}}" title="{{menu.name}}">{{menu.name}}</a>
 
                     <ul>
                         <li data-ng-repeat="page in menu.pages">
-                            <a href="{{page.link}}" title="{{page.title}}">{{page.name}}</a>
+                            <a href="{{page.link}}" title="{{page.name}}">{{page.name}}</a>
                         </li>
                     </ul>
                 </li>
