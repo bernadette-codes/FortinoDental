@@ -33,27 +33,7 @@
 <h1 class="seo">Fortino Dental</h1>
 <h2 class="seo">General Family & Cosmetic Dentistry in Ancaster, ON</h2>
 
-<header data-ng-controller="MenuController as menu">
-    <div class="place-nav">
-        <a title="Fortino logo" class="logo" href="http://www.fortinodental.com/">
-            <img alt="Fortino Dental logo" src="assets/img/logo-fortino-dental2.jpg"/>
-        </a>
-
-        <nav id="desktop-nav">
-            <ul>
-                <li data-ng-repeat="menu in menu">
-                    <a href="{{menu.link}}" title="{{menu.name}}">{{menu.name}}</a>
-
-                    <ul>
-                        <li data-ng-repeat="page in menu.pages">
-                            <a href="{{page.link}}" title="{{page.name}}">{{page.name}}</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<header menu-bar></header>
 
 <main class="clearfix">
     <div class="index">
@@ -474,6 +454,7 @@
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/menu.js"></script>
 <!-- Developed by Bernadette Estacio Engleman -->
 </body>
 </html>
