@@ -438,22 +438,22 @@
 
             <div class="col-md-4">
                 <h3>Office Hours</h3>
-                <p class="hours">
-                    <label>Monday</label> 8:00 am - 5:00 pm
+                <p data-ng-controller="ScheduleController" class="hours">
+                    <label>Monday</label> {{schedule.Monday}}
                     <br/>
-                    <label>Tuesday</label> 8:00 am - 6:00 pm
+                    <label>Tuesday</label> {{schedule.Tuesday}}
                     <br/>
-                    <label>Wednesday</label> 10:00 am - 7:00 pm
+                    <label>Wednesday</label> {{schedule.Wednesday}}
                     <br/>
-                    <label>Thursday</label> 8:00 am - 6:00 pm
+                    <label>Thursday</label> {{schedule.Thursday}}
                     <br/>
-                    <label>Friday</label> 9:00 am - 5:00 pm
+                    <label>Friday</label> {{schedule.Friday}}
                     <br/>
-                    <label>Saturday</label> 9:00 am - 5:00 pm
+                    <label>Saturday</label> {{schedule.Saturday}}
                     <br/>
-                    <label>Saturday</label> (once a month)
+                    <label>Saturday</label> {{schedule.SaturdayNote}}
                     <br/>
-                    <label>Sunday</label> Emergency only
+                    <label>Sunday</label> {{schedule.Sunday}}
                 </p>
             </div>
         </div>
