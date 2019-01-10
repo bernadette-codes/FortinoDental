@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Rhonda",
+      "title": "Office Manager / Receptionist",
+      "photoFileName": "team-rhonda.jpg",
+      "columnSpace": 6
+    },
+    {
+      "name": "Hannah",
+      "title": "Dental Assistant",
+      "photoFileName": "team-hannah.jpg",
+      "columnSpace": 6
+    },
+    {
+      "name": "Jennifer F.",
+      "title": "Dental Hygienists",
+      "photoFileName": "team-jenniferF.jpg",
+      "columnSpace": 4
+    }, {
+      "name": "Jennifer C.",
+      "title": "Dental Hygienists",
+      "photoFileName": "team-jenniferC.jpg",
+      "columnSpace": 4
+    }, {
+      "name": "Marisa",
+      "title": "Dental Hygienists",
+      "photoFileName": "team-marisa.jpg",
+      "columnSpace": 4
+    }
+]
