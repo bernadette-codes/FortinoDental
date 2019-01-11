@@ -46,7 +46,7 @@
             <h3>{{photo.treatment}}</h3>
 
             <section data-ng-repeat="row in photo.rows" class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-ng-show="row.row[0]">
                     <div class="col-xs-6 before">
                         <label>before</label>
                         <img src="assets/img/gallery/{{row.row[0]}}/before.jpg" alt="before" class="img-responsive"/>
@@ -56,7 +56,7 @@
                         <img src="assets/img/gallery/{{row.row[0]}}/after.jpg" alt="after" class="img-responsive"/>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-ng-show="row.row[1]">
                     <div class="col-xs-6 before">
                         <label>before</label>
                         <img src="assets/img/gallery/{{row.row[1]}}/before.jpg" alt="before" class="img-responsive"/>
