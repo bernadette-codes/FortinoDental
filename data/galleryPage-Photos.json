@@ -1,0 +1,52 @@
+[{
+  "treatment": "Teeth Whitening",
+  "rows": [
+    {
+      "row": [
+        "teeth-whitening/1",
+        "teeth-whitening/2"
+      ]
+    }, {
+      "row": [
+        "teeth-whitening/3",
+        "teeth-whitening/4"
+      ]
+    }, {
+      "row": [
+        "teeth-whitening/5"
+      ]
+    }
+  ]
+
+}, {
+  "treatment": "Lip Fillers",
+  "rows": [
+    {
+      "row": [
+        "lip-fillers/1",
+        "lip-fillers/2"
+      ]
+    }, {
+      "row": [
+        "lip-fillers/4",
+        "lip-fillers/3"
+      ]
+    }, {
+      "row": [
+        "lip-fillers/5",
+        "lip-fillers/6"
+      ]
+    }
+  ]
+}, {
+  "treatment": "Dental Implant",
+  "rows": [
+    {
+      "row": [
+        "implant/1",
+        "implant/2"
+      ]
+    }
+  ]
+
+}]
