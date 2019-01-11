@@ -13,7 +13,8 @@
       ]
     }, {
       "row": [
-        "teeth-whitening/5"
+        "teeth-whitening/5",
+        ""
       ]
     }
   ]
@@ -36,8 +37,24 @@
         "lip-fillers/5",
         "lip-fillers/6"
       ]
+    }, {
+      "row": [
+        "lip-fillers/7",
+        "lip-fillers/8"
+      ]
     }
   ]
+}, {
+  "treatment": "Crowns and Bridges",
+  "rows": [
+    {
+      "row": [
+        "crown-bridge/1",
+        "crown-bridge/2"
+      ]
+    }
+  ]
+
 }, {
   "treatment": "Dental Implant",
   "rows": [
