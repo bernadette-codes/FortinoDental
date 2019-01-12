@@ -1,0 +1,10 @@
+{
+  "Monday": "8:00 am - 5:00 pm",
+  "Tuesday": "8:00 am - 6:00 pm",
+  "Wednesday": "10:00 am - 7:00 pm",
+  "Thursday": "8:00 am - 6:00 pm",
+  "Friday": "9:00 am - 5:00 pm",
+  "Saturday": "9:00 am - 5:00 pm",
+  "SaturdayNote": "(once a month)",
+  "Sunday": "Emergency only"
+}
