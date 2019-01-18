@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="website">
+
+<head>
+    <title>Botox - Fortino Dental | General Family & Cosmetic Dentistry in Ancaster, ON</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="Fortino Dental offers Botox therapeutics to patients looking for pain relief from tension type migraine headaches, TMJ pain and bruxism (grinding of the teeth and teeth clenching).">
+    <meta name="keywords" content="botox near me, botox Ancaster Ontario, botox Hamilton Ontario, botox Dundas Ontario, botox Burlington Ontario, botox Waterdown Ontario">
+    <meta name="geo.region" content="CA-ON" />
+    <meta name="geo.placename" content="Hamilton" />
+    <meta name="geo.position" content="43.228181;-79.975877" />
+    <meta name="ICBM" content="43.228181, -79.975877" />
+    <meta name="author" content="Bernadette Estacio">
+    <link rel="shortcut icon" href="assets/img/logo-favicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/misc.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,700,700i,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body class="page_index">
+
+<h1 class="seo">Botox</h1>
+<h2 class="seo">Fortino Dental</h2>
+
+<header class="menu-bar"></header>
+
+<main class="clearfix services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Therapeutic Botox</h2>
+
+                <p>We offer Botox therapeutics to patients looking for pain relief from tension type migraine headaches, TMJ pain and bruxism (grinding of the teeth and teeth clenching).
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img alt="Botox" src="assets/img/services/botox1.jpg" class="img-responsive"/>
+            </div>
+        </div>
+
+        <h3>How does Botox affect Muscle Function?</h3>
+
+        <p>The administration of Botox is to relax the muscles.
+            Botox affects muscles by decreasing the intensity of muscle contractions.
+            It doesn’t mean that your muscles won’t function.
+            It just relaxes the muscles enough to prevent extreme contractions, which can cause pain or lead to unwanted wrinkles.
+        </p>
+
+        <p>Botox treatment can be diagnostic too.
+            If the same pain persists after the muscles are treated with Botox, it can be determined that the muscles treated are not the source of your pain.
+        </p>
+
+        <p>Botox, famous for smoothing out wrinkles on the face, has been approved to treat chronic migraine headaches in adults.
+        </p>
+
+        <h3>How Botox Treats Migraines</h3>
+
+        <p>Migraine headaches are painful, debilitating disorders that greatly affect family, work, and social life.
+            Treatment is the only chance for pain relief.
+            About 40-45% of the general population suffers from head, neck and facial pain.
+            Botox treatments for migraines are typically given once every four-five months.
+        </p>
+
+        <p>To perform the treatment, the doctor will inject multiple doses of the medicine in specific points along the bridge of the nose, the temples, and the forehead.
+            Injections are on both the right and left side of the head.
+        </p>
+
+        <p>The goal of these injections is to reduce the symptoms caused by a migraine headache.
+            These symptoms include nausea, vomiting, and sensitivity to lights, sounds, and smells.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Botox Treatment for Jaw Tension and TMJ Pain Relief</h3>
+
+                <p>Located on both sides of the head at the point where the jawbone meets the skull, the temporo-mandibular joint (TMJ) is used during talking, eating, swallowing, and other everyday activities.
+                    If this joint becomes displaced or is overworked through excessive teeth grinding, a person may suffer severe tension headaches, as well as sharp pain in the jaw.
+                </p>
+
+                <p>Botox can also be used to treat TMJ disorders and associated jaw tension pain. When injected into facial muscles afflicted with soreness and discomfort, BOTOX relieves TMJ and jaw tension pain by preventing the powerful, often unconscious movement of the jaw that produces headaches and pain.
+                    In the same way, Botox can even minimize lock jaw disorders.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img alt="Botox" src="assets/img/services/botox2.jpg" class="img-responsive"/>
+            </div>
+        </div>
+
+
+        <h3>Botox For Bruxism (Teeth Clenching And Grinding) Pain Relief</h3>
+
+        <p>Bruxism is the medical term for teeth clenching and grinding, either while awake or asleep, which can lead to physical painful and severe dental problems.
+            Chronic teeth grinding can cause headache, earaches, facial pain, and even migraines.
+        </p>
+
+        <p>Recently, Botox has proven to be an ideal treatment option for targeting and treating excessive muscle activity and spasticity.
+            By injecting small doses of Botox directly into the masseter muscle (the large muscle that moves the jaw), the muscle is weakened enough to stop involuntary grinding of the teeth and clenching of the jaw.
+            This significantly relaxes the muscle and reduces the wear and tear on the teeth due to grinding.
+            Damage to the TMJ and headaches should be reduced or eliminated as well.
+            Voluntary movements, such as chewing and facial expressions, are not affected at all by Botox.
+        </p>
+    </div>
+</main>
+
+<footer class="footer-section"></footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/footer.js"></script>
+<!-- Developed by Bernadette Estacio Engleman -->
+</body>
+</html>
