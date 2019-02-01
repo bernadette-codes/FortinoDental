@@ -439,10 +439,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: $black;
+  background-color: $white;
   text-align: center;
   line-height: 1;
   z-index: 100;
+  //border-bottom: 1px solid #cccccc;
 
   a img {
     border: 0;
@@ -480,7 +481,8 @@ header {
   }
   nav ul li a {
     display: block;
-    color: $white;
+    color: $fontColor;
+    font-weight: 900;
   }
   nav > ul {
     font-size: 0;
@@ -492,12 +494,12 @@ header {
   }
   nav > ul > li > a {
     font-size: 20px;
-    color: $white;
+    color: $fontColor;
     text-transform: uppercase;
     padding: 8px 6px;
   }
   nav > ul > li:hover > a:hover {
-    background-color: $darkGray;
+    background-color: $fontColor;
     @include link($white);
   }
   nav ul li:hover > ul {
@@ -517,8 +519,8 @@ header {
     z-index: 3;
     left: 0;
     text-align: left;
-    background: $darkGray;
-    box-shadow: 10px 17.3px 25px rgba(0, 0, 0, 0.2);
+    background: $white;
+    box-shadow: 1.5px 2.6px 13px $darkGray;
   }
   nav > ul > li:last-child ul {
     right: 0;
@@ -535,7 +537,7 @@ header {
   }
   nav ul ul li:hover > a,
   nav ul ul li > a:hover {
-    background-color: $black;
+    background-color: $fontColor;
     @include link($white);
   }
   body > section {
@@ -592,9 +594,11 @@ header {
   header #desktop-nav {
     display: none !important;
   }
-  .mean-container .mean-bar,
-  .mean-container .mean-nav {
+  .mean-container .mean-bar {
     background: $darkGray;
+  }
+  .mean-container .mean-nav {
+    background: $white;
   }
   body, header, .mean-container .mean-nav {
     @include transition(all .08s);
@@ -673,7 +677,7 @@ header {
   }
   .mean-container .mean-nav ul li a {
     display: block;
-    @include link($white);
+    @include link($fontColor);
     padding: 1em 5%;
     padding-right: 58px !important;
     margin: 0;
@@ -707,8 +711,7 @@ header {
     padding: 1em 25%;
   }
   .mean-container .mean-nav ul li a:hover {
-    background: #252525;
-    background: rgba(255, 255, 255, 0.1);
+    background: $white;
   }
   .mean-container .mean-nav ul li a.mean-expand {
     width: 48px;
@@ -720,10 +723,10 @@ header {
     right: 0;
     top: 0;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.1);
+    background: $white;
     border: none !important;
-    border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-left: 1px solid $white !important;
+    border-bottom: 1px solid $white !important;
   }
   .mean-container .mean-nav ul li a.mean-expand:before {
     content: '\e825';
