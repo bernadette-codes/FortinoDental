@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('website', ['header-menu', 'footer-section']);
+    var app = angular.module('website', ['footer-section']);
 
     // Office Hours
     app.controller('ScheduleController', ['$scope', '$http', function(scope, http){
