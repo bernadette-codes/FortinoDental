@@ -3,7 +3,7 @@
 
 [Fortino Dental](https://www.fortinodental.com/) is a responsive dental website created for a client.
 
-![DrFortinoPeriodontics Landing Page](https://bernadetteestacio.site/dental-website.d2321a05.png)
+![DrFortinoPeriodontics Landing Page](https://bernadetteestacio.site/assets/img/portfolio/dental-website.png)
 
 **Front-End:**
 
